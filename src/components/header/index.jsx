@@ -3,13 +3,12 @@ import React, { useState } from 'react'
 import Nav from './nav';
 
 const Header = () => {
-
   const [isActive, setIsActive] = useState(false);
 
   return (
-    <div className="">
-      <div className='w-full bg-[#01090D80] py-4 fixed backdrop-blur-2xl'>
-        <div className="grid grid-cols-12 gap-8 w-full max-w-[1850px] m-auto border-b-[#E6F7FF80]">
+    <header className="">
+      <div className='z-10 w-full bg-[#01090D80] py-4 fixed backdrop-blur-2xl border-b-1 border-b-[#E6F7FF40]'>
+        <div className="grid grid-cols-12 gap-8 w-full max-w-[1850px] m-auto">
           <div className="col-span-10 justify-between items-stretch">
             <svg width="126" height="32" viewBox="0 0 126 33" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clipPath="url(#clip0_81_200)">
@@ -30,7 +29,7 @@ const Header = () => {
               </defs>
             </svg>
           </div>
-            <button onClick={() => setIsActive(!isActive)} className="col-span-1 text-lg text-background self-center flex items-center justify-between cursor-pointer">
+            <button onClick={() => setIsActive(!isActive)} className="col-span-1 text-lg text-background self-center flex items-center justify-between cursor-pointer py-2">
               <div className="w-1/2 flex flex-col h-6 overflow-hidden">
                 <span className={`will-change-transform duration-750 ease-[cubic-bezier(0.87,0,0.13,1)] ${isActive ? 'translate-y-[-30px]' : 'translate-y-0'}`}>Menu</span>
                 <span className={`will-change-transform duration-750 ease-[cubic-bezier(0.87,0,0.13,1)] ${isActive ? 'translate-y-[-30px]' : 'translate-y-[10px]'}`}>Fechar</span>
@@ -42,11 +41,9 @@ const Header = () => {
             </button>
         </div>
       </div>
-      <Nav/>
-    </div>
+      <Nav isActive={isActive}/>
+    </header>
   )
 }
 
 export default Header
-
-/*{isActive ? <span>Fechar</span> : <span>Menu</span>}*/
