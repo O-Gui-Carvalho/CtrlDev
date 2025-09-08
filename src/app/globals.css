@@ -17,3 +17,9 @@ body {
   background: #E6F7FF;
   color: #021A26;
 }
+
+@layer utilities {
+  .clip-overlay {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+  }
+}
