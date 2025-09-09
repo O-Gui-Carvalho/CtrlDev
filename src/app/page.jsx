@@ -1,6 +1,7 @@
 'use client'
 
-import Hero from "@/components/Hero";
+import About from "@/components/About";
+import Hero from "@/components/hero/Hero";
 import Lenis from "lenis";
 import Image from "next/image";
 import { useEffect } from "react";
@@ -24,6 +25,7 @@ export default function Home() {
   return (
     <div className="min-h-[5000px]">
       <Hero/>
+      {/*<About/>*/}
     </div>
   );
 }

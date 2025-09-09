@@ -11,7 +11,7 @@ const hero = () => {
         </video>
         <div className="relative grid grid-cols-12 gap-8 px-8 h-dvh">
             <div className="col-span-7 self-end pb-16">
-                <h1 className='text-[92px] leading-none font-bold text-background capitalize'>Criação de sites que destacam sua empresa</h1>
+                <h1 className='text-[clamp(3rem,5vw,5rem)] leading-none font-bold text-background capitalize'>Criamos sites que destacam sua empresa</h1>
                 <div className="flex gap-4 pt-12">
                     <button className='font-semibold flex items-center justify-center gap-2 py-4 px-8 bg-background text-darkp rounded-lg cursor-pointer'>
                         Fale Conosco
@@ -23,11 +23,12 @@ const hero = () => {
                 </div>
             </div>
             <div className="col-start-9 col-span-3 self-end text-background pb-16">
-                <p>Criamos sites modernos, profissionais e exclusivos para destacar sua marca. Sem modelos prontos, sem soluções genéricas — cada site é único, feito sob medida para levar seu negócio ao próximo nível.</p>
+                <p>Desenvolvemos sites modernos, profissionais e exclusivos para destacar sua marca. Sem modelos prontos, sem soluções genéricas — cada site é único, feito sob medida para levar seu negócio ao próximo nível.</p>
             </div>
-            <div className="col-start-12 self-end flex fixed justify-center mix-blend-difference bottom-16 right-16">
+            {/*<div className="col-start-12 col-span-1 self-end flex mix-blend-difference justify-center bottom-16 right-16 fixed">
                 <Whats/>
-            </div>
+            </div>*/}
+
         </div>
     </div>
   )
