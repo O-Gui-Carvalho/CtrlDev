@@ -94,11 +94,11 @@ const Header = () => {
         {/* Nav */}
 
         <div ref={overlay} className="fixed top-0 left-0 w-dvw h-dvh bg-darkp z-5 clip-overlay">
-            <div className="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-8 px-8">
-                <div className="hidden md:block md:col-span-4 lg:col-span-5 -ml-8 relative h-dvh">
+            <div className="grid md:grid-rows-3 grid-cols-4 md:grid-cols-8 lg:grid-cols-12 md:gap-4 lg:gap-8 px-8 h-dvh content-end">
+                <div className="hidden md:block md:col-span-4 lg:col-span-5 row-span-2 -ml-8 relative h-dvh">
                     <Image src='/Nav.svg' alt='Nav Image' fill className='object-cover'/>
                 </div>
-                <div className="col-span-2 lg:col-start-7 flex flex-col justify-end h-dvh pb-16 gap-30">
+                <div className="col-span-2 md:row-span-2 lg:col-start-7 flex flex-col justify-end">
                     <nav>
                         {menuLinks.map((link, index) => (
                             <div className="w-max overflow-hidden" key={`${link.path}-${index}`}>
@@ -110,13 +110,19 @@ const Header = () => {
                             </div>
                         ))}
                     </nav>
-                    <span className="text-[#ffffff80] text-[clamp(0.5rem,2vw,1rem)]">Espirito Santo</span>
                 </div>
-                <div className="lg:col-start-10 col-span-2 flex flex-col justify-end h-dvh pb-16 gap-40">
-                    <p className="text-[#ffffff80] text-[clamp(0.5rem,2vw,1rem)]">
+                <div className="col-start-1 md:row-span-2 md:col-start-7 lg:col-start-10 col-span-2 flex flex-col justify-end">
+                    <p className="text-[#ffffff80] text-[clamp(0.75rem,2vw,1rem)] pb-16 md:pb-0">
                         Crie seu site conosco e descubra o poder da presença online
                     </p>
-                    <span className="text-[#ffffff80] text-[clamp(0.5rem,2vw,1rem)]">contato@ctrldev.com.br</span>
+                </div>
+                <div className="col-start-1 md:col-start-5 lg:col-start-7 col-span-2 flex flex-col justify-end gap-8 pb-8">
+                    <span className="text-[#ffffff80] text-[clamp(0.75rem,2vw,1rem)]">Espirito Santo</span>
+                </div>
+                <div className="col-start-3 md:col-start-7 col-span-2 flex flex-col justify-end text-[#ffffff80] text-[clamp(0.75rem,2vw,1rem)] text-right pb-8">
+                    <span>Instagram &#8599;</span>
+                    <span>Dribble &#8599;</span>
+                    <span>Github &#8599;</span>
                 </div>
             </div>
         </div>
@@ -125,3 +131,21 @@ const Header = () => {
 }
 
 export default Header
+
+{/*
+    
+                <div className="col-start-1 md:col-start-7 lg:col-start-10 col-span-2 flex flex-col gap-40">
+                    <p className="text-[#ffffff80] text-[clamp(0.75rem,2vw,1rem)] pb-16">
+                        Crie seu site conosco e descubra o poder da presença online
+                    </p>
+                </div>
+                <div className="col-start-1 md:col-start-5 lg:col-start-7 col-span-2 flex flex-col justify-end gap-8 pb-8">
+                    <span className="text-[#ffffff80] text-[clamp(0.75rem,2vw,1rem)]">Espirito Santo</span>
+                </div>
+                <div className="col-start-3 md:col-start-7 col-span-2 flex flex-col justify-end text-[#ffffff80] text-[clamp(0.75rem,2vw,1rem)] text-right pb-8">
+                    <span>Instagram &#8599;</span>
+                    <span>Dribble &#8599;</span>
+                    <span>Github &#8599;</span>
+                </div>
+                
+*/}

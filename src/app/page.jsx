@@ -9,18 +9,21 @@ import { useEffect } from "react";
 export default function Home() {
 
   useEffect(() => {
-    // Initialize Lenis
-    const lenis = new Lenis({
-      autoRaf: true,
-    });
+    const lenis = new Lenis({ autoRaf: false /* ou não setar */ });
+    let rafId;
 
     function raf(time) {
       lenis.raf(time);
-      requestAnimationFrame(raf);
+      rafId = requestAnimationFrame(raf);
     }
 
-    requestAnimationFrame(raf);
-  }, [])
+    rafId = requestAnimationFrame(raf);
+
+    return () => {
+      cancelAnimationFrame(rafId);
+      if (typeof lenis.destroy === 'function') lenis.destroy();
+    };
+  }, []);
 
   return (
     <div className="min-h-[5000px]">
