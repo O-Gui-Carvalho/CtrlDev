@@ -28,7 +28,7 @@ export default function Home() {
   return (
     <div className="min-h-[5000px]">
       <Hero/>
-      {/*<About/>*/}
+      <About/>
     </div>
   );
 }
