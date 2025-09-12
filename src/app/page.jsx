@@ -9,7 +9,7 @@ import { useEffect } from "react";
 export default function Home() {
 
   useEffect(() => {
-    const lenis = new Lenis({ autoRaf: false /* ou não setar */ });
+    const lenis = new Lenis({ autoRaf: false });
     let rafId;
 
     function raf(time) {
