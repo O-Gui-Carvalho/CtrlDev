@@ -27,7 +27,7 @@ const Whats = () => {
   }
 
   return (
-    <div className='relative rounded-full text-background text-4xl p-4 cursor-pointer' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+    <div className='z-20 relative rounded-full text-background text-4xl p-4 cursor-pointer' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
         <Link href={'https://wa.me/message/MZ3XAEYWTNVYJ1'} target='_blank' rel='noopener noreferrer'>
           <div ref={textRef} className="relative w-20 h-20 rounded-full flex items-center justify-center">
             {circleText.split("").map((char, index) => (

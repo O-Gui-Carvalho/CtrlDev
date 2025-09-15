@@ -1,6 +1,6 @@
 'use client'
 
-import About from "@/components/About";
+import About from "@/components/about/About";
 import Hero from "@/components/hero/Hero";
 import Lenis from "lenis";
 import Image from "next/image";

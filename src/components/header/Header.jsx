@@ -56,7 +56,7 @@ const Header = () => {
   return (
     <header ref={container}>
 
-        <div className="z-10 w-dvw bg-[#01090D80] px-2 md:px-4 lg:px-8 py-4 fixed backdrop-blur-2xl border-b-1 border-b-[#E6F7FF40] grid gap-8 grid-cols-4 md:grid-cols-8 lg:grid-cols-12">
+        <div className="z-10 w-dvw bg-[#01090D80] px-2 md:px-4 lg:px-8 py-4 fixed backdrop-blur-2xl border-b-1 border-b-[#E6F7FF80] grid gap-8 grid-cols-4 md:grid-cols-8 lg:grid-cols-12">
             <div className="justify-between items-start col-span-3 md:col-span-6 lg:col-span-10">
                 <div className="max-w-fit h-full flex items-center">
                     <Link href='/'>
