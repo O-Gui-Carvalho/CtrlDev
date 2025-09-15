@@ -103,7 +103,7 @@ const Header = () => {
                         {menuLinks.map((link, index) => (
                             <div className="w-max overflow-hidden" key={`${link.path}-${index}`}>
                                 <div ref={el => menuHolder.current[index] = el} className="relative" onClick={toggleMenu}>
-                                    <Link href={link.path} className='text-[clamp(3rem,4vw,5rem)] leading-14 md:leading-14 lg:leading-22 text-background'>
+                                    <Link href={link.path} className='text-[clamp(3rem,4vw,5rem)] leading-14 md:leading-14 lg:leading-22 text-background transition-colors duration-300 hover:text-lights'>
                                         {link.label}
                                     </Link>
                                 </div>

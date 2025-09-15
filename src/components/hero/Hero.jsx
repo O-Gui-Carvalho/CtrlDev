@@ -17,6 +17,25 @@ const Hero = () => {
     const paragraph = useRef(null);
 
     useGSAP(() => {
+        let tl = gsap.timeline()
+        const titulo = new SplitText(titleRef.current, {type: 'words,lines', autoSplit:true, mask:'lines'})
+        const paragrafo = new SplitText(paragraph.current, {type: 'words,lines', autoSplit:true, mask:'lines'})
+        tl.from(titulo.words, {
+            duration: 1,
+            yPercent: 100,
+            stagger: 0.05,
+            ease: 'expo.out'
+        })
+        tl.from(paragrafo.words, {
+            duration: 0.5,
+            yPercent: 100,
+            stagger: 0.01,
+            ease: 'expo.out'
+        }, '-=0.8')
+
+    }, {scope: titleRef, paragraph})
+
+    /*useGSAP(() => {
         if (titleRef.current){
             const split = new SplitText(titleRef.current, {type: 'words,lines', autoSplit: true, mask: 'lines',})
             gsap.from(split.words, {
@@ -37,7 +56,7 @@ const Hero = () => {
             })
         }
 
-    }, {scope: titleRef, paragraph})
+    }, {scope: titleRef, paragraph})*/
 
   return (
     <div className='relative h-dvh w-dvw overflow-hidden'>
@@ -54,7 +73,7 @@ const Hero = () => {
                     <Button where="https://wa.me/message/MZ3XAEYWTNVYJ1" type='sec'>Conheça nosso trabalho</Button>
                 </div>
             </div>
-            <div className="fixed right-6 bottom-8 mix-blend-difference">
+            <div className="z-20 fixed right-6 bottom-8 mix-blend-difference">
                 <Whats/>
             </div>
         </div>
