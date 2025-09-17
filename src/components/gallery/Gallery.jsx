@@ -1,0 +1,63 @@
+'use client';
+
+import React, { useRef } from 'react';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
+
+gsap.registerPlugin(ScrollTrigger);
+
+const Gallery = () => {
+  const fText = useRef(null);
+  const sText = useRef(null);
+  const containerRef = useRef(null);
+  const xPercent = useRef(0);
+  const direction = useRef(1);
+  const speed = useRef(0.1);
+
+  useGSAP(() => {
+      gsap.set([fText.current, sText.current], { xPercent: xPercent.current });
+
+      const step = () => {
+        let x = xPercent.current;
+        const dir = direction.current;
+
+        if (x <= -100) x = 0;
+        if (x > 0) x = -100;
+
+        gsap.set([fText.current, sText.current], { xPercent: x });
+
+        x += speed.current * dir;
+        xPercent.current = x;
+      };
+
+      gsap.ticker.add(step);
+
+      ScrollTrigger.create({
+        trigger: document.body,
+        start: 'top top',
+        end: 'bottom bottom',
+        onUpdate: (self) => {
+          direction.current = self.direction === 1 ? -1 : 1
+        },
+      });
+
+    }, []);
+
+  return (
+    <div className='mt-64'>
+      <div className="relative w-screen overflow-hidden">
+        <div ref={containerRef} className="flex flex-nowrap">
+          <p ref={fText} className='uppercase text-darkp text-5xl md:text-7xl lg:text-9xl whitespace-nowrap tracking-wider'>
+            Projetos Selecionados&#xa0;-&#xa0;
+          </p>
+          <p ref={sText} className='uppercase text-darkp text-5xl md:text-7xl lg:text-9xl whitespace-nowrap tracking-wider'>
+            Projetos Selecionados&#xa0;-&#xa0;
+          </p>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default Gallery

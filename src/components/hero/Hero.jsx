@@ -35,29 +35,6 @@ const Hero = () => {
 
     }, {scope: titleRef, paragraph})
 
-    /*useGSAP(() => {
-        if (titleRef.current){
-            const split = new SplitText(titleRef.current, {type: 'words,lines', autoSplit: true, mask: 'lines',})
-            gsap.from(split.words, {
-                duration: 1,
-                yPercent: 100,
-                stagger: 0.08,
-                ease: 'expo.out'
-            })
-        }
-
-        if (paragraph.current){
-            const split = new SplitText(paragraph.current, {type: 'lines', autoSplit: true, mask: 'lines',})
-            gsap.from(split.lines, {
-                duration: 1,
-                yPercent: 100,
-                stagger: 0.08,
-                ease: 'expo.out'
-            })
-        }
-
-    }, {scope: titleRef, paragraph})*/
-
   return (
     <div className='relative h-dvh w-dvw overflow-hidden'>
         <video autoPlay muted loop playsInline preload="none" className='absolute top-0 left-0 w-dvw h-full object-cover -z-1'>

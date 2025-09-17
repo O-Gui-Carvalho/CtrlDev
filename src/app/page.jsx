@@ -1,9 +1,9 @@
 'use client'
 
 import About from "@/components/about/About";
+import Gallery from "@/components/gallery/Gallery";
 import Hero from "@/components/hero/Hero";
 import Lenis from "lenis";
-import Image from "next/image";
 import { useEffect } from "react";
 
 export default function Home() {
@@ -29,6 +29,7 @@ export default function Home() {
     <div className="min-h-[5000px]">
       <Hero/>
       <About/>
+      <Gallery/>
     </div>
   );
 }
