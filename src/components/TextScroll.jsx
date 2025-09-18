@@ -6,6 +6,7 @@ import React, { useRef } from 'react'
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
 const TextScroll = ({children, className}) => {
+    const containerRef = useRef(null)
     const textAnim = useRef(null);
 
     useGSAP(() => {
@@ -15,7 +16,7 @@ const TextScroll = ({children, className}) => {
 
         gsap.from(split.chars, {
             scrollTrigger: {
-                trigger: '#container',
+                trigger: containerRef.current,
                 start: 'top 90%',
                 end: 'bottom 40%',
                 scrub: true,
@@ -27,7 +28,7 @@ const TextScroll = ({children, className}) => {
     }, [])
 
   return (
-    <div id='container' className={className}>
+    <div ref={containerRef} className={className}>
         <p ref={textAnim}>{children}</p>
     </div>
   )

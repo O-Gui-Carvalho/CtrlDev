@@ -1,59 +1,29 @@
-'use client';
-
-import React, { useRef } from 'react';
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/all';
-
-gsap.registerPlugin(ScrollTrigger);
+import Image from "next/image"
+import HorizontalText from "./HorizontalText"
+import TextScroll from "../TextScroll"
+import gsap from "gsap"
+import { useGSAP } from "@gsap/react"
+import { ScrollTrigger } from "gsap/all"
+import { useRef } from "react"
 
 const Gallery = () => {
-  const fText = useRef(null);
-  const sText = useRef(null);
-  const containerRef = useRef(null);
-  const xPercent = useRef(0);
-  const direction = useRef(1);
-  const speed = useRef(0.1);
+  const imagem = useRef(null)
 
   useGSAP(() => {
-      gsap.set([fText.current, sText.current], { xPercent: xPercent.current });
-
-      const step = () => {
-        let x = xPercent.current;
-        const dir = direction.current;
-
-        if (x <= -100) x = 0;
-        if (x > 0) x = -100;
-
-        gsap.set([fText.current, sText.current], { xPercent: x });
-
-        x += speed.current * dir;
-        xPercent.current = x;
-      };
-
-      gsap.ticker.add(step);
-
-      ScrollTrigger.create({
-        trigger: document.body,
-        start: 'top top',
-        end: 'bottom bottom',
-        onUpdate: (self) => {
-          direction.current = self.direction === 1 ? -1 : 1
-        },
-      });
-
-    }, []);
+    
+  }, [])
 
   return (
     <div className='mt-64'>
-      <div className="relative w-screen overflow-hidden">
-        <div ref={containerRef} className="flex flex-nowrap">
-          <p ref={fText} className='uppercase text-darkp text-5xl md:text-7xl lg:text-9xl whitespace-nowrap tracking-wider'>
-            Projetos Selecionados&#xa0;-&#xa0;
-          </p>
-          <p ref={sText} className='uppercase text-darkp text-5xl md:text-7xl lg:text-9xl whitespace-nowrap tracking-wider'>
-            Projetos Selecionados&#xa0;-&#xa0;
-          </p>
+      <HorizontalText/>
+      <div className="custom-grid">
+        <div className="col-span-3 md:col-span-7 lg:col-span-11 mt-64 grid grid-cols-3 md:grid-cols-7 lg:grid-cols-11 gap-2 md:gap-4 lg:gap-8">
+          <div className="cols-start-1 col-span-3 md:col-span-7 lg:col-span-11 rounded-lg max-h-[80dvh] overflow-hidden">
+            <Image ref={imagem} src="/mockup.jpg" alt="Mockup Dummy" width={1600} height={1200} className="w-full"/>
+          </div>
+          <TextScroll className="cols-start-1 col-span-3 md:col-span-6 lg:col-span-9 mt-16 text-[clamp(2rem,5vw,60px)] leading-snug">
+            Criamos experiencias visuais memoráveis para que seus clientes nunca te esqueçam.
+          </TextScroll>
         </div>
       </div>
     </div>

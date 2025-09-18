@@ -28,3 +28,7 @@ body {
 .line-mask {
   @apply block overflow-hidden;
 }
+
+.custom-grid {
+  @apply grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-2 md:gap-4 lg:gap-8 px-2 md:px-4 lg:px-8;
+}
