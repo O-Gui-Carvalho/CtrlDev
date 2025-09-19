@@ -18,8 +18,8 @@ const TextScroll = ({children, className}) => {
             scrollTrigger: {
                 trigger: containerRef.current,
                 start: 'top 90%',
-                end: 'bottom 40%',
-                scrub: true,
+                end: 'top 50%',
+                scrub: 2,
             },
             opacity: 0.1,
             stagger: 0.05,

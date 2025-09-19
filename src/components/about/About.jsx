@@ -27,7 +27,7 @@ const About = () => {
   return (
     <div className='grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-2 md:gap-4 lg:gap-8 px-2 md:px-4 lg:px-8'>
         
-        <TextScroll className="col-span-3 md:col-span-6 lg:col-span-9 mt-64 text-[clamp(2rem,5vw,60px)] leading-snug">
+        <TextScroll className="col-span-3 md:col-span-6 lg:col-span-9 mt-64 text-[clamp(1.5rem,5vw,60px)] leading-snug">
             Vestibulum nunc ipsum, hendrerit quis laoreet vitae, molestie nec sem. Donec eleifend arcu sed justo elementum fermentum.
         </TextScroll>
 
