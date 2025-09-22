@@ -3,6 +3,7 @@
 import About from "@/components/about/About";
 import Gallery from "@/components/gallery/Gallery";
 import Hero from "@/components/hero/Hero";
+import Services from "@/components/services/Services";
 import Lenis from "lenis";
 import { useEffect } from "react";
 
@@ -30,6 +31,7 @@ export default function Home() {
       <Hero/>
       <About/>
       <Gallery/>
+      <Services/>
     </div>
   );
 }
