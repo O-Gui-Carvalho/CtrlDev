@@ -8,7 +8,7 @@ import { useRef } from "react"
 
 gsap.registerPlugin(ScrollTrigger)
 
-function ParallaxImage() {
+function ParallaxImage({src, alt, className}) {
   const container = useRef(null)
   const imagem = useRef(null)
     
@@ -22,15 +22,15 @@ function ParallaxImage() {
       },
     })
     tl.from(imagem.current, {
-      yPercent: -50,
+      yPercent: -30,
     }
   )
   }, [])
 
 
   return (
-    <div ref={container} className="cols-start-1 col-span-3 md:col-span-7 lg:col-span-11 rounded-lg max-h-[80dvh] overflow-hidden">
-        <Image ref={imagem} src="/mockup.jpg" alt="Mockup Dummy" width={1600} height={1200} className="w-full"/>
+    <div ref={container} className={className}>
+        <Image ref={imagem} src={src} alt={alt} width={1600} height={1200} className="w-full object-cover scale-120"/>
     </div>
   )
 }
