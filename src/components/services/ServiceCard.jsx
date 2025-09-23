@@ -48,7 +48,7 @@ const ServiceCard = ({num, src, alt, title, paragraph, b1, b2, b3}) => {
                 <div className='image-container col-start-1 lg:col-start-2 col-span-3 overflow-hidden'>
                     <Image src={src} alt={alt} width={1920} height={1080} className='img aspect-square object-cover rounded-xl'/>
                 </div>
-                <div className="col-span-3 md:col-span-4">
+                <div className="col-span-3 md:col-span-4 lg:col-span-7">
                     <span className='text-[clamp(2rem,5vw,60px)]'>{title}</span>
                     <div className="expandable-content overflow-hidden">
                         <div className="flex flex-col gap-2 lg:flex-row justify-between mt-16 text-xl">
