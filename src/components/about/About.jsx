@@ -25,14 +25,14 @@ const About = () => {
     }, [])
 
   return (
-    <div className='grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-2 md:gap-4 lg:gap-8 px-2 md:px-4 lg:px-8'>
+    <div className='custom-grid'>
         
-        <TextScroll className="col-span-3 md:col-span-6 lg:col-span-9 mt-64 text-[clamp(1.5rem,5vw,60px)] leading-snug">
+        <TextScroll className="col-span-3 md:col-span-6 lg:col-span-9 my-32 md:my-64 text-[clamp(2rem,5vw,60px)] leading-snug">
             Transformamos ideias em experiências digitais extraordinárias, 
             criando soluções modernas que impulsionam o seu negócio.
         </TextScroll>
 
-        <div id='cards' className="col-span-3 md:col-span-7 lg:col-span-12 grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-8 mt-64">
+        <div id='cards' className="col-span-3 md:col-span-7 lg:col-span-12 grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-8">
             <AboutCard className="about-card col-start-1" imageSrc={'/star.svg'} imageAlt={'Beneficio 1'} title={'Design Responsivo'}>
                 <p>
                     Criamos interfaces que se adaptam perfeitamente a qualquer dispositivo, 

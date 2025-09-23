@@ -42,16 +42,16 @@ const ServiceCard = ({num, src, alt, title, paragraph, b1, b2, b3}) => {
 
   return (
     <div>
-        <div className="service-card bg-background border-b border-[#00659840] transition-colors duration-500 ease-in-out hover:bg-[#CCEFFF] cursor-pointer py-8">
+        <div className="service-card bg-background border-b border-[#00659840] transition-colors duration-500 ease-in-out hover:bg-[#D9F2FF] cursor-pointer py-8">
             <div className="custom-grid items-center">
-                <span className='text-6xl col-span-1'>{num}</span>
-                <div className='image-container col-span-3 overflow-hidden'>
+                <span className='text-[clamp(2rem,5vw,60px)] col-span-3 md:col-span-1'>{num}</span>
+                <div className='image-container col-start-1 lg:col-start-2 col-span-3 overflow-hidden'>
                     <Image src={src} alt={alt} width={1920} height={1080} className='img aspect-square object-cover rounded-xl'/>
                 </div>
-                <div className="col-span-7">
-                    <span className='text-6xl'>{title}</span>
+                <div className="col-span-3 md:col-span-4">
+                    <span className='text-[clamp(2rem,5vw,60px)]'>{title}</span>
                     <div className="expandable-content overflow-hidden">
-                        <div className="flex justify-between mt-16 text-xl">
+                        <div className="flex flex-col gap-2 lg:flex-row justify-between mt-16 text-xl">
                             <div className="flex gap-4 items-center">
                                 <GiStarShuriken className='text-lights'/><span>{b1}</span>
                             </div>
