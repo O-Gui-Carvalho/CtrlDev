@@ -27,7 +27,7 @@ const About = () => {
   return (
     <div className='custom-grid'>
         
-        <TextScroll className="col-span-3 md:col-span-6 lg:col-span-9 my-32 md:my-64 text-[clamp(2rem,5vw,60px)] leading-snug">
+        <TextScroll className="col-span-3 md:col-span-6 lg:col-span-9 my-32 md:my-64 text-[clamp(1.5rem,5vw,60px)] leading-snug">
             Transformamos ideias em experiências digitais extraordinárias, 
             criando soluções modernas que impulsionam o seu negócio.
         </TextScroll>

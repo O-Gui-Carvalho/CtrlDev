@@ -1,11 +1,12 @@
-import React from 'react'
+'use client'
+
+import React, { useState } from 'react'
 import Image from 'next/image'
 import { GiStarShuriken } from "react-icons/gi"
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 
 const ServiceCard = ({num, src, alt, title, paragraph, b1, b2, b3}) => {
-    
     useGSAP(() => {
     gsap.utils.toArray(".service-card").forEach((card) => {
         const img = card.querySelector(".img")

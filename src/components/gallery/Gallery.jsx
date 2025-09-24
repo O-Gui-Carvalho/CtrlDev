@@ -16,7 +16,7 @@ const Gallery = () => {
           />
           
           {/* Texto principal - Row 2 */}
-          <TextScroll className="col-start-1 col-span-3 md:col-span-6 lg:col-span-9 row-start-2 text-[clamp(2rem,5vw,60px)] leading-snug mb-32 lg:mb-64">
+          <TextScroll className="col-start-1 col-span-3 md:col-span-6 lg:col-span-9 row-start-2 text-[clamp(1.5rem,5vw,60px)] leading-snug mb-32 lg:mb-64">
             Criamos experiencias visuais memoráveis para que seus clientes nunca te esqueçam.
           </TextScroll>
           
