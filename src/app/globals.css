@@ -32,3 +32,7 @@ body {
 .custom-grid {
   @apply grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-2 md:gap-4 lg:gap-8 px-2 md:px-4 lg:px-8;
 }
+
+.max-size {
+  @apply col-span-3 md:col-span-5 lg:col-span-7;
+}
