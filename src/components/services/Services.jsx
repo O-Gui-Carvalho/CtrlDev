@@ -1,8 +1,11 @@
-import React from 'react'
+'use client'
+
+import React, { useState } from 'react'
 import TextScroll from '../TextScroll'
 import ServiceCard from './ServiceCard'
 
 const Services = () => {
+    const [ active, setActive ] = useState(0)
 
   return (
         <div className="mb-64">
@@ -21,6 +24,8 @@ const Services = () => {
                     b1={'Experiencia de usuário'}
                     b2={'Responsividade'}
                     b3={'Textos otimizados'}
+                    isActive={active === 0}
+                    onActivate={() => setActive(0)}
                 />
                 <ServiceCard 
                     num={'02'} 
@@ -31,6 +36,8 @@ const Services = () => {
                     b1={'Performance otimizada'}
                     b2={'Responsividade'}
                     b3={'Tecnologias modernas'}
+                    isActive={active === 1}
+                    onActivate={() => setActive(1)}
                 />
                 <ServiceCard 
                     num={'03'} 
@@ -41,6 +48,8 @@ const Services = () => {
                     b1={'Brand strategy'}
                     b2={'Design consistente'}
                     b3={'Material gráfico'}
+                    isActive={active === 2}
+                    onActivate={() => setActive(2)}
                 />
             </div>
         </div>

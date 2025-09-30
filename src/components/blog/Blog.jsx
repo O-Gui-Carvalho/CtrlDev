@@ -33,23 +33,17 @@ const Blog = () => {
 
     useGSAP(() => {
         gsap.utils.toArray('.blog-cover').forEach((cover) => {
-            const imgCont = cover.querySelector('.img-container')
             const textCont = cover.querySelector('.text-container')
-
-            gsap.set(imgCont, { width: 0 })
-            gsap.set(textCont, { yPercent: 200 })
+            
+            gsap.set(textCont, { yPercent: 200, opacity: 0 })
 
             const hoverAnimation = gsap.timeline({ paused: true })
-            .to(imgCont, {
-                width: 'auto',
-                duration: 0.5,
-                ease: 'power2.out'
-            })
             .to(textCont, {
                 yPercent: 0,
                 duration: 0.5,
+                opacity: 1,
                 ease: 'power2.out'
-            }, '-=0.3')
+            })
 
             cover.addEventListener("mouseenter", () => hoverAnimation.play())
             cover.addEventListener("mouseleave", () => hoverAnimation.reverse())
@@ -81,7 +75,7 @@ const Blog = () => {
         </TextScroll>
         <div className="col-span-3 md:col-span-7 lg:col-span-11 grid grid-cols-3 md:grid-cols-7 lg:grid-cols-11 gap-2 md:gap-4 mb-64">
             {posts.map(( posts, index ) => (
-                <div ref={(el) => containersRef.current[index] = el} key={index} onMouseEnter={() => handleMouseEnter(index)} className={`img-container blog-cover relative overflow-hidden rounded-xl group cursor-pointer h-[600px] col-span-3 md:col-span-2 lg:col-span-2 `}>
+                <div ref={(el) => containersRef.current[index] = el} key={index} onMouseEnter={() => handleMouseEnter(index)} className={`img-container blog-cover relative overflow-hidden rounded-xl group cursor-pointer h-[600px] col-span-3 md:col-span-1 lg:col-span-2 `}>
                     <Image src={posts.img} alt='Coding blog post' width={1920} height={1080} className='object-cover h-full rounded-xl transition-transform duration-300 ease-in-out group-hover:scale-110'/>
                     <div className="absolute top-0 left-0 m-8 py-1 px-4 bg-[#08304540] rounded-full text-background border-1 border-[#B6C3C940] backdrop-blur-xl">
                         <span>{posts.category}</span>
