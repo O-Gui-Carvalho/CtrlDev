@@ -21,7 +21,6 @@ export default function Transition() {
   const col3 = useRef(null)
   const col4 = useRef(null)
 
-  // gsap animations
   useGSAP(() => {
     const height = window.innerHeight;
 
@@ -36,8 +35,7 @@ export default function Transition() {
             trigger: gallery.current,
             start: "top bottom",
             end: "bottom top",
-            scrub: true,
-            markers: true
+            scrub: true
           },
         }
       )
@@ -51,7 +49,6 @@ export default function Transition() {
 
   return (
     <main>
-      {/* Galeria */}
       <div
         ref={gallery}
         className="box-border relative flex gap-4 p-4 h-[175vh] bg-darkp overflow-hidden"
@@ -69,7 +66,7 @@ const Column = ({ images, refProp }) => {
   return (
     <div
       ref={refProp}
-      className="relative h-full flex flex-col gap-4 w-1/4 min-w-[250px] first:top-[-45%] nth-2:top-[-95%] nth-3:top-[-75%] nth-4:top-[-75%]"
+      className="relative h-full flex flex-col gap-4 w-1/4 min-w-[175px] first:top-[-45%] nth-2:top-[-95%] nth-3:top-[-75%] nth-4:top-[-75%]"
     >
       {images.map((src, i) => (
         <div

@@ -51,7 +51,7 @@ const ServiceCard = ({ num, src, alt, title, paragraph, b1, b2, b3, isActive, on
     <div 
       ref={cardRef} 
       onMouseEnter={onActivate} 
-      className="service-card bg-background border-b border-[#00659840] transition-colors duration-500 ease-in-out hover:bg-[#D9F2FF] cursor-pointer py-8"
+      className="bg-background border-b border-[#00659840] transition-colors duration-500 ease-in-out hover:bg-[#D9F2FF] cursor-pointer py-8"
     >
       <div className="custom-grid">
         <span className='text-[clamp(2rem,5vw,60px)] col-span-3 md:col-span-1'>{num}</span>
