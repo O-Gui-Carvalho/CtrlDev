@@ -20,7 +20,6 @@ const TextScroll = ({children, className}) => {
                 start: 'top 90%',
                 end: 'top 50%',
                 scrub: 2,
-                markers: true
             },
             opacity: 0.1,
             stagger: 0.05,
