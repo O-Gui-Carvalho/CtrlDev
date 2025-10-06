@@ -3,8 +3,6 @@
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { SplitText } from 'gsap/SplitText'
-import Image from 'next/image'
-import Link from 'next/link'
 import { useRef } from 'react'
 import { PiPaperPlaneTiltBold } from 'react-icons/pi'
 import Whats from '../Whats'
