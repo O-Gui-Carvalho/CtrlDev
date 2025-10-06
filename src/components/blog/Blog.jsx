@@ -76,7 +76,7 @@ const Blog = () => {
         <div className="col-span-3 md:col-span-7 lg:col-span-11 grid grid-cols-3 md:grid-cols-7 lg:grid-cols-11 gap-2 md:gap-4 mb-64">
             {posts.map(( posts, index ) => (
                 <div ref={(el) => containersRef.current[index] = el} key={index} onMouseEnter={() => handleMouseEnter(index)} className={`img-container blog-cover relative overflow-hidden rounded-xl group cursor-pointer h-[600px] col-span-3 md:col-span-1 lg:col-span-2 `}>
-                    <Image src={posts.img} alt='Coding blog post' width={1920} height={1080} className='object-cover h-full rounded-xl transition-transform duration-300 ease-in-out group-hover:scale-110'/>
+                    <Image src={posts.img} alt='Coding blog post' width={1920} height={1080} className='object-cover h-full rounded-xl transition-transform duration-300 ease-in-out group-hover:scale-110 sm:aspect-square'/>
                     <div className="absolute top-0 left-0 m-8 py-1 px-4 bg-[#08304540] rounded-full text-background border-1 border-[#B6C3C940] backdrop-blur-xl">
                         <span>{posts.category}</span>
                     </div>
