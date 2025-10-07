@@ -48,7 +48,7 @@ const Hero = () => {
                     <Button where="https://wa.me/message/MZ3XAEYWTNVYJ1" type='sec'>Conheça nosso trabalho</Button>
                 </div>
             </div>
-            <div className="z-20 fixed right-6 bottom-8 mix-blend-difference">
+            <div className="z-20 fixed right-2 md:right-4 lg:right-8 bottom-6 mix-blend-difference">
                 <Whats/>
             </div>
         </div>

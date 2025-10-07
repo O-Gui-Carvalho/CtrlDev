@@ -27,12 +27,12 @@ const Whats = () => {
   }
 
   return (
-    <div className='z-20 relative rounded-full text-background text-4xl p-4 cursor-pointer' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+    <div className='z-20 relative rounded-full text-background text-4xl cursor-pointer' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
         <Link href={'https://wa.me/message/MZ3XAEYWTNVYJ1'} target='_blank' rel='noopener noreferrer'>
           <div ref={textRef} className="relative w-20 h-20 rounded-full flex items-center justify-center">
-            <Image src={'/fale-conosco-arial.svg'} alt={'Fale Conosco'} width={1080} height={1080} className="scale-120"/>
+            <Image src={'/fale-conosco-arial.svg'} alt={'Fale Conosco'} width={1080} height={1080} className="scale-90 md:scale-100 lg:scale-120"/>
           </div>
-          <div className="absolute inset-0 flex items-center justify-center">
+          <div className="absolute inset-0 flex items-center justify-center scale-80 md:scale-100 lg:scale-120">
             <ImWhatsapp/>
           </div>
         </Link>
