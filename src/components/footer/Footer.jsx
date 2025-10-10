@@ -2,6 +2,7 @@ import React from 'react'
 import Button from '../Button'
 import { PiPaperPlaneTiltBold } from 'react-icons/pi'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const Footer = () => {
   return (
@@ -30,26 +31,14 @@ const Footer = () => {
             </div>
         </div>
 
-        <div className="absolute bottom-0 left-0 select-none -z-1">
-            <svg
-            className="w-dvw"
-            viewBox="0 0 920 200"
-            preserveAspectRatio="xMidYMid slice"
-            xmlns="http://www.w3.org/2000/svg"
-            >
-                <text
-                    x="50%"
-                    y="75%"
-                    textAnchor="middle"
-                    dominantBaseline="middle"
-                    fontFamily="Inter, sans-serif"
-                    fill="rgba(206,230,242)"
-                    fontWeight="bold"
-                    fontSize="200"
-                >
-                    CTRLDEV
-                </text>
-            </svg>
+        <div className="absolute bottom-0 left-0 w-full select-none -z-10" style={{ transform: 'translateY(25%)' }}>
+            <Image 
+                src='/destaq-footer.svg' 
+                alt='Destaq Logo' 
+                width={1920} 
+                height={525}
+                className="w-full h-auto"
+            />
         </div>
     </div>
   )

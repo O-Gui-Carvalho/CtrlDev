@@ -11,12 +11,12 @@ gsap.registerPlugin(Flip)
 
 const posts = [
     {
-        title: "Design de sites: Estratégia, processo e custos explicados.",
+        title: "Design de sites: Estratégia, processo e custos.",
         category: "Programação",
         img: "/coding.jpg"
     },
     {
-        title: "Marketing digital: Como criar campanhas de alto impacto.",
+        title: "Marketing digital: Criando campanhas de alto impacto.",
         category: "Marketing",
         img: "/marketing.jpg"
     },
@@ -75,17 +75,17 @@ const Blog = () => {
         </TextScroll>
         <div className="col-span-3 md:col-span-7 lg:col-span-11 grid grid-cols-3 md:grid-cols-7 lg:grid-cols-11 gap-2 md:gap-4 mb-64">
             {posts.map(( posts, index ) => (
-                <div ref={(el) => containersRef.current[index] = el} key={index} onMouseEnter={() => handleMouseEnter(index)} className={`img-container blog-cover relative overflow-hidden rounded-xl group cursor-pointer h-[600px] col-span-3 md:col-span-1 lg:col-span-2 `}>
-                    <Image src={posts.img} alt='Coding blog post' width={1920} height={1080} className='object-cover h-full rounded-xl transition-transform duration-300 ease-in-out group-hover:scale-110 sm:aspect-square'/>
-                    <div className="absolute top-0 left-0 m-8 py-1 px-4 bg-[#08304540] rounded-full text-background border-1 border-[#B6C3C940] backdrop-blur-xl">
+                <div ref={(el) => containersRef.current[index] = el} key={index} onMouseEnter={() => handleMouseEnter(index)} className={`img-container blog-cover relative overflow-hidden rounded-xl group cursor-pointer md:h-[600px] col-span-3 md:col-span-1 lg:col-span-2 `}>
+                    <Image src={posts.img} alt='Coding blog post' width={1920} height={1080} className='aspect-square object-cover h-full rounded-xl transition-transform duration-300 ease-in-out group-hover:scale-110'/>
+                    <div className="absolute top-0 left-0 m-2 md:m-4 lg:m-8 py-1 px-4 bg-[#08304540] rounded-full text-background border-1 border-[#B6C3C940] backdrop-blur-xl">
                         <span>{posts.category}</span>
                     </div>
-                    <div className="text-container absolute bottom-0 left-0 right-0 px-8 max-w-3xl w-full mx-auto text-background my-8 p-8 bg-[#08304540] border-1 border-[#B6C3C940] backdrop-blur-lg flex items-center justify-between gap-8 rounded-2xl">
-                        <span className='text-2xl max-w-[430px]'>
+                    <div className="text-container absolute bottom-0 left-0 right-0 px-2 md:px-8 max-w-3xl w-full mx-auto text-background my-8 p-8 bg-[#08304540] border-1 border-[#B6C3C940] backdrop-blur-lg flex flex-col items-start md:flex-row md:items-center justify-between gap-4 md:gap-8 rounded-2xl">
+                        <span className='text-lg md:text-2xl max-w-[430px]'>
                             {posts.title}
                         </span>
                         <div className="bg-[#08304580] p-4 rounded-full transition-colors duration-300 ease-in-out group-hover:bg-background group-hover:text-darkp">
-                            <FaArrowUp className='rotate-45 text-2xl transition-transform duration-300 ease-in-out group-hover:rotate-90'/>
+                            <FaArrowUp className='rotate-45 text-lg lg:text-2xl transition-transform duration-300 ease-in-out group-hover:rotate-90'/>
                         </div>
                     </div>
                 </div>

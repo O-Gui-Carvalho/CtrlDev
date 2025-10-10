@@ -55,18 +55,18 @@ export default function Transition() {
       >
         <Column refProp={col1} images={[images[0], images[1], images[2]]} />
         <Column refProp={col2} images={[images[3], images[4], images[5]]} />
-        <Column refProp={col3} images={[images[6], images[7], images[8]]} />
-        <Column refProp={col4} images={[images[9], images[10], images[11]]} />
+        <Column refProp={col3} images={[images[6], images[7], images[8]]} className="hidden md:flex" />
+        <Column refProp={col4} images={[images[9], images[10], images[11]]} className="hidden lg:flex" />
       </div>
     </main>
   )
 }
 
-const Column = ({ images, refProp }) => {
+const Column = ({ images, refProp, className = "" }) => {
   return (
     <div
       ref={refProp}
-      className="relative h-full flex flex-col gap-4 w-1/4 min-w-[175px] first:top-[-45%] nth-2:top-[-95%] nth-3:top-[-75%] nth-4:top-[-75%]"
+      className={`relative h-full flex flex-col gap-4 w-1/2 md:w-1/3 lg:w-1/4 min-w-0 first:top-[-45%] nth-2:top-[-95%] nth-3:top-[-75%] nth-4:top-[-75%] ${className}`}
     >
       {images.map((src, i) => (
         <div
