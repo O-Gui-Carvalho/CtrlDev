@@ -8,10 +8,10 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
 const images = [
-  "1.jpg", "2.jpg", "3.jpg",
-  "4.jpg", "5.jpg", "6.jpg",
-  "7.jpg", "8.jpg", "9.jpg",
-  "10.jpg", "11.jpg", "12.jpg"
+  "1.png", "2.png", "3.png",
+  "4.png", "5.png", "6.png",
+  "7.png", "8.png", "9.png",
+  "10.png", "11.png", "12.png"
 ];
 
 export default function Transition() {
@@ -51,7 +51,7 @@ export default function Transition() {
     <main>
       <div
         ref={gallery}
-        className="box-border relative flex gap-4 p-4 h-[175vh] bg-darkp overflow-hidden"
+        className="box-border relative flex gap-2 md:gap-4 p-2 md:p-4 h-[175vh] bg-darkp overflow-hidden"
       >
         <Column refProp={col1} images={[images[0], images[1], images[2]]} />
         <Column refProp={col2} images={[images[3], images[4], images[5]]} />
@@ -66,18 +66,21 @@ const Column = ({ images, refProp, className = "" }) => {
   return (
     <div
       ref={refProp}
-      className={`relative h-full flex flex-col gap-4 w-1/2 md:w-1/3 lg:w-1/4 min-w-0 first:top-[-45%] nth-2:top-[-95%] nth-3:top-[-75%] nth-4:top-[-75%] ${className}`}
+      className={`relative h-full flex flex-col gap-2 md:gap-4 w-1/2 md:w-1/3 lg:w-1/4 first:top-[-45%] nth-2:top-[-95%] nth-3:top-[-75%] nth-4:top-[-75%] ${className}`}
     >
       {images.map((src, i) => (
         <div
           key={i}
-          className="relative w-full h-full rounded-lg overflow-hidden"
+          className="relative w-full rounded-lg overflow-hidden"
+          style={{
+            aspectRatio: '1920/3245',
+          }}
         >
           <Image
             src={`/images/${src}`}
             alt="image"
             fill
-            className="object-cover"
+            className="object-cover object-top"
           />
         </div>
       ))}
