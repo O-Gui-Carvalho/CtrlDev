@@ -30,13 +30,11 @@ const TextHover = ({ title, text, active }) => {
 
     gsap.killTweensOf(splitRef.current.lines)
 
-    // 👇 se não for tela grande, sempre mostra o texto
     if (!isLargeScreen) {
       gsap.set(splitRef.current.lines, { yPercent: 0 })
       return
     }
 
-    // 👇 comportamento normal de hover em telas grandes
     if (active) {
       gsap.set(splitRef.current.lines, { yPercent: 100 })
       gsap.to(splitRef.current.lines, {

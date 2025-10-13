@@ -8,7 +8,7 @@ import { PiPaperPlaneTiltBold } from 'react-icons/pi'
 import Whats from '../Whats'
 import Button from '../Button'
 
-gsap.registerPlugin(SplitText);
+gsap.registerPlugin(SplitText)
 
 const Hero = () => {
     const titleRef = useRef(null);

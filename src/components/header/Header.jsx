@@ -1,10 +1,11 @@
 'use client'
 
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
-import Link from 'next/link';
-import React, { useEffect, useRef, useState } from 'react';
-import Image from 'next/image';
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
+import Link from 'next/link'
+import React, { useEffect, useRef, useState } from 'react'
+import Image from 'next/image'
+import { SplitText } from 'gsap/all'
 
 const menuLinks = [
     {path: '/', label: 'Home'},
@@ -14,20 +15,29 @@ const menuLinks = [
     {path: '/', label: 'Contato'},
 ]
 
+gsap.registerPlugin(SplitText)
+
 const Header = () => {
-    const container = useRef(null);
-    const overlay = useRef(null);
-    const menuHolder = useRef([]);
-    const tl = useRef(null);
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const container = useRef(null)
+    const overlay = useRef(null)
+    const menuHolder = useRef([])
+    const tl = useRef(null)
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const animTexts = useRef([])
 
     const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
-    };
+        setIsMenuOpen(!isMenuOpen)
+    }
 
     useGSAP(() => {
-        const items = menuHolder.current;
-        gsap.set(items, {y: 100});
+        if (!overlay.current || !menuHolder.current.length || !animTexts.current.length) return;
+
+        const splitAnim = animTexts.current.map(el => new SplitText(el, { type: 'lines', autoSplit: true, mask:'lines'}))
+        
+        const items = menuHolder.current
+
+        gsap.set(splitAnim.map(s => s.lines), { y: 100 })
+        gsap.set(items, { y: 100 })
 
         tl.current = gsap.timeline({paused: true})
         .to(overlay.current, {
@@ -42,21 +52,27 @@ const Header = () => {
             ease: 'power3.inOut',
             delay: -0.75,
         })
-    }, {scope: container});
+        .to(splitAnim.map(s => s.lines), {
+            y: 0,
+            duration: 1,
+            stagger: 0.1,
+            ease: 'power3.inOut',
+            delay: -0.75,
+        }, '-=0.8')
+    }, {scope: container})
 
     useEffect(() => {
         if (isMenuOpen) {
-            tl.current.play();
+            tl.current.play()
         } else {
-            tl.current.reverse();
+            tl.current.reverse()
         }
-    }, [isMenuOpen]);
-
+    }, [isMenuOpen])
 
   return (
     <header ref={container}>
 
-        <div className="z-10 w-full bg-[#01090D80] fixed backdrop-blur-2xl border-b-1 border-b-[#E6F7FF80]">
+        <div className="z-10 w-full bg-[#01090D80] fixed backdrop-blur-2xl border-b border-b-[#E6F7FF80]">
             <div className="custom-grid py-4">
                 <div className="justify-between items-start col-span-3 md:col-span-6 lg:col-span-10">
                     <div className="max-w-fit h-full flex items-center">
@@ -111,18 +127,18 @@ const Header = () => {
                         ))}
                     </nav>
                 </div>
-                <div className="col-start-1 md:row-span-2 md:col-start-7 lg:col-start-10 col-span-2 flex flex-col justify-end">
-                    <p className="text-[#ffffff80] text-[clamp(0.75rem,2vw,1rem)] pb-16 md:pb-0">
+                <div className="col-start-1 md:row-span-2 md:col-start-7 lg:col-start-10 col-span-2 flex flex-col justify-end overflow-hidden">
+                    <p className="text-[#ffffff80] text-[clamp(0.75rem,2vw,1rem)] pb-16 md:pb-0" ref={el => animTexts.current[0] = el}>
                         Crie seu site conosco e descubra o poder da presença online
                     </p>
                 </div>
                 <div className="col-start-1 md:col-start-5 lg:col-start-7 col-span-2 flex flex-col justify-end gap-8 pb-8">
-                    <span className="text-[#ffffff80] text-[clamp(0.75rem,2vw,1rem)]">Espirito Santo</span>
+                    <span className="text-[#ffffff80] text-[clamp(0.75rem,2vw,1rem)]" ref={el => animTexts.current[1] = el}>Espirito Santo</span>
                 </div>
                 <div className="col-start-3 md:col-start-7 lg:col-start-10 col-span-2 flex flex-col justify-end text-[#ffffff80] text-[clamp(0.75rem,2vw,1rem)] text-right pb-8">
-                    <span>Instagram &#8599;</span>
-                    <span>Dribble &#8599;</span>
-                    <span>Github &#8599;</span>
+                    <span ref={el => animTexts.current[2] = el}>Instagram &#8599;</span>
+                    <span ref={el => animTexts.current[3] = el}>Dribble &#8599;</span>
+                    <span ref={el => animTexts.current[4] = el}>Github &#8599;</span>
                 </div>
             </div>
         </div>
