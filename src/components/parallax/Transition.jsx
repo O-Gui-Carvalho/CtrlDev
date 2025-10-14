@@ -68,22 +68,43 @@ const Column = ({ images, refProp, className = "" }) => {
       ref={refProp}
       className={`relative h-full flex flex-col gap-2 md:gap-4 w-1/2 md:w-1/3 lg:w-1/4 first:top-[-45%] nth-2:top-[-95%] nth-3:top-[-75%] nth-4:top-[-75%] ${className}`}
     >
-      {images.map((src, i) => (
-        <div
-          key={i}
-          className="relative w-full rounded-lg overflow-hidden"
-          style={{
-            aspectRatio: '1920/3245',
-          }}
-        >
-          <Image
-            src={`/images/${src}`}
-            alt="image"
-            fill
-            className="object-cover object-top"
-          />
-        </div>
-      ))}
+      <div className="flex flex-col gap-2 md:gap-4">
+        {images.map((src, i) => (
+          <div
+            key={i}
+            className="relative w-full rounded-lg overflow-hidden"
+            style={{
+              aspectRatio: '1920/3245',
+            }}
+          >
+            <Image
+              src={`/images/${src}`}
+              alt="image"
+              fill
+              className="object-cover object-top"
+            />
+          </div>
+        ))}
+      </div>
+      
+      <div className="flex flex-col gap-2 md:gap-4">
+        {images.map((src, i) => (
+          <div
+            key={i}
+            className="relative w-full rounded-lg overflow-hidden"
+            style={{
+              aspectRatio: '1920/3245',
+            }}
+          >
+            <Image
+              src={`/images/${src}`}
+              alt="image"
+              fill
+              className="object-cover object-top"
+            />
+          </div>
+        ))}
+      </div>
     </div>
   )
 }

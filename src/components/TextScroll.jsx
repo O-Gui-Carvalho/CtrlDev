@@ -25,7 +25,7 @@ const TextScroll = ({children, className}) => {
             stagger: 0.05,
             ease: 'power3.inOut'
         })
-    }, [])
+    }, { dependencies: [children], scope: containerRef })
 
   return (
     <div ref={containerRef} className={className}>
