@@ -21,7 +21,7 @@ const Services = () => {
                     src={'/web-design.jpg'} 
                     alt={'Web Design'} 
                     title={'Web Design'} 
-                    paragraph={'We create visually compelling and user-friendly websites that reflect your brands identity and engage your target audience. Our designs are tailored to provide seamless navigation and a memorable user experience.'} 
+                    paragraph={'Criamos sites visualmente envolventes e fáceis de usar que refletem a identidade da sua marca e engajam seu público-alvo. Nossos designs são pensados para oferecer navegação fluida e uma experiência memorável.'} 
                     b1={'Experiencia de usuário'}
                     b2={'Responsividade'}
                     b3={'Textos otimizados'}

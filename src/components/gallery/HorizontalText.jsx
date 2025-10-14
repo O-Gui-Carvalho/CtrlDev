@@ -1,35 +1,38 @@
-'use client';
+'use client'
 
-import React, { useRef } from 'react';
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/all';
+import React, { useRef } from 'react'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/all'
+
+gsap.registerPlugin(ScrollTrigger)
 
 const HorizontalText = () => {
-    const fText = useRef(null);
-    const sText = useRef(null);
-    const containerRef = useRef(null);
-    const xPercent = useRef(0);
-    const direction = useRef(1);
-    const speed = useRef(0.1);
+    const fText = useRef(null)
+    const sText = useRef(null)
+    const containerRef = useRef(null)
+    const xPercent = useRef(0)
+    const direction = useRef(1)
+    const speed = useRef(0.1)
     
     useGSAP(() => {
-        gsap.set([fText.current, sText.current], { xPercent: xPercent.current });
+      if (!fText.current, sText.current) return
+        gsap.set([fText.current, sText.current], { xPercent: xPercent.current })
 
         const step = () => {
-            let x = xPercent.current;
-            const dir = direction.current;
+            let x = xPercent.current
+            const dir = direction.current
 
-            if (x <= -100) x = 0;
-            if (x > 0) x = -100;
+            if (x <= -100) x = 0
+            if (x > 0) x = -100
 
-            gsap.set([fText.current, sText.current], { xPercent: x });
+            gsap.set([fText.current, sText.current], { xPercent: x })
 
-            x += speed.current * dir;
-            xPercent.current = x;
-        };
+            x += speed.current * dir
+            xPercent.current = x
+        }
 
-        gsap.ticker.add(step);
+        gsap.ticker.add(step)
 
         ScrollTrigger.create({
             trigger: document.body,
@@ -38,9 +41,9 @@ const HorizontalText = () => {
             onUpdate: (self) => {
             direction.current = self.direction === 1 ? -1 : 1
             },
-        });
+        })
 
-        }, []);
+        }, [])
 
   return (
     <div className="relative w-screen overflow-hidden">

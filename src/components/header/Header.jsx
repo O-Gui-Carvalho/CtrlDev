@@ -129,7 +129,7 @@ const Header = () => {
                 </div>
                 <div className="col-start-1 md:row-span-2 md:col-start-7 lg:col-start-10 col-span-2 flex flex-col justify-end overflow-hidden">
                     <p className="text-[#ffffff80] text-[clamp(0.75rem,2vw,1rem)] pb-16 md:pb-0" ref={el => animTexts.current[0] = el}>
-                        Crie seu site conosco e descubra o poder da presença online
+                        Crie sua marca conosco e descubra o poder da presença online.
                     </p>
                 </div>
                 <div className="col-start-1 md:col-start-5 lg:col-start-7 col-span-2 flex flex-col justify-end gap-8 pb-8">

@@ -19,6 +19,7 @@ const Hero = () => {
         const titulo = new SplitText(titleRef.current, {type: 'words,lines', autoSplit:true, mask:'lines'})
         const paragrafo = new SplitText(paragraph.current, {type: 'words,lines', autoSplit:true, mask:'lines'})
         tl.from(titulo.words, {
+            delay: 1.5,
             duration: 1,
             yPercent: 100,
             stagger: 0.05,
@@ -42,7 +43,7 @@ const Hero = () => {
         <div className="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-2 md:gap-4 lg:gap-8 px-2 md:px-4 lg:px-8 h-dvh">
             <div className="col-span-4 md:col-span-6 lg:col-span-8 flex flex-col items-start justify-center gap-4 md:gap-8">
                 <h1 className='text-[clamp(2.5rem,5vw,6rem)] text-background font-bold capitalize leading-none' ref={titleRef}>Criamos sites que destacam sua empresa</h1>
-                <p className='text-background text-[clamp(0.8rem,2vw,1rem)] max-w-4xl' ref={paragraph}>Desenvolvemos sites modernos, profissionais e exclusivos para destacar sua marca. Sem modelos prontos, sem soluções genéricas — cada site é único, feito sob medida para levar seu negócio ao próximo nível.</p>
+                <p className='text-background text-[clamp(0.8rem,2vw,1rem)] max-w-4xl' ref={paragraph}>Desenvolvemos experiências digitais únicas que conectam sua marca ao público certo. Sites modernos, identidades visuais marcantes e soluções personalizadas para elevar o seu negócio ao próximo nível.</p>
                 <div className="flex w-dvw gap-2 lg:gap-4">
                     <Button where="https://wa.me/message/MZ3XAEYWTNVYJ1" type='main'>Fale Conosco <PiPaperPlaneTiltBold/></Button>
                     <Button where="https://wa.me/message/MZ3XAEYWTNVYJ1" type='sec'>Conheça nosso trabalho</Button>
