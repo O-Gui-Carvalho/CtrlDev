@@ -112,7 +112,7 @@ const Header = () => {
         <div ref={overlay} className="fixed top-0 left-0 w-dvw h-dvh bg-darkp z-5 clip-overlay">
             <div className="grid grid-rows-3 grid-cols-4 md:grid-cols-8 lg:grid-cols-12 md:gap-4 lg:gap-8 px-8 h-dvh content-end">
                 <div className="hidden md:block md:col-span-4 lg:col-span-5 row-span-2 -ml-8 relative h-dvh">
-                    <Image src='/Nav.svg' alt='Nav Image' fill className='object-cover'/>
+                    <Image src='/DestaqMock.webp' alt='Nav Image' fill className='object-cover'/>
                 </div>
                 <div className="col-span-2 row-span-2 lg:col-start-7 flex flex-col justify-end">
                     <nav>

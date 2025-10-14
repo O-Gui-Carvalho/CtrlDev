@@ -1,4 +1,5 @@
 'use client'
+
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { useState, useEffect, useRef } from 'react'
@@ -38,7 +39,7 @@ const Preloader = () => {
         ease: 'power3.inOut'
     }, '-=0.3')
     tl.to(overlay.current, {
-        duration: 1,
+        duration: 1.5,
         clipPath: 'inset(0% 0% 100% 0%)',
         ease: 'power3.inOut'
     })

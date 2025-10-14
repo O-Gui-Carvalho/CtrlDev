@@ -18,7 +18,7 @@ const Services = () => {
             <div className="w-full">
                 <TestCard 
                     num={'01'} 
-                    src={'/web-design.jpg'} 
+                    src={'/web-design.webp'} 
                     alt={'Web Design'} 
                     title={'Web Design'} 
                     paragraph={'Criamos sites visualmente envolventes e fáceis de usar que refletem a identidade da sua marca e engajam seu público-alvo. Nossos designs são pensados para oferecer navegação fluida e uma experiência memorável.'} 
@@ -30,7 +30,7 @@ const Services = () => {
                 />
                 <TestCard 
                     num={'02'} 
-                    src={'/desenvolvimento-web.jpg'} 
+                    src={'/desenvolvimento-web.webp'} 
                     alt={'Desenvolvimento Web'} 
                     title={'Criação de sites'} 
                     paragraph={'Desenvolvemos websites robustos e escaláveis utilizando as mais modernas tecnologias. Nosso foco está em criar soluções que sejam rápidas, seguras e otimizadas para mecanismos de busca.'} 
@@ -42,7 +42,7 @@ const Services = () => {
                 />
                 <TestCard 
                     num={'03'} 
-                    src={'/identidade.jpg'} 
+                    src={'/identidade.webp'} 
                     alt={'Identidade Visual'} 
                     title={'Identidade Visual'} 
                     paragraph={'Criamos identidades visuais marcantes e memoráveis que comunicam os valores da sua marca de forma clara e impactante. Do logotipo aos materiais promocionais, garantimos consistência em todos os pontos de contato.'} 

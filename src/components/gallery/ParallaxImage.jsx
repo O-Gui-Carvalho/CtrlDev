@@ -30,7 +30,7 @@ function ParallaxImage({src, alt, className}) {
 
   return (
     <div ref={container} className={className}>
-        <Image ref={imagem} src={src} alt={alt} width={1600} height={1200} className="w-full object-cover scale-120"/>
+        <Image ref={imagem} src={src} alt={alt} width={4000} height={3000} className="w-full object-cover scale-120"/>
     </div>
   )
 }

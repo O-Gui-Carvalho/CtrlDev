@@ -15,7 +15,7 @@ const Gallery = () => {
         <div className="col-span-3 md:col-span-7 lg:col-span-11 mt-32 md:mt-64 grid grid-cols-3 md:grid-cols-7 lg:grid-cols-11 gap-x-2 md:gap-x-4 lg:gap-x-8 gap-y-8 md:gap-y-12 lg:gap-y-16" style={{gridTemplateRows: 'auto auto repeat(4, auto)'}}>
           {/* Imagem principal - Row 1 */}
           <ParallaxImage 
-            src="/mockup.jpg" 
+            src="/ViaJairDestaqMock.webp" 
             alt="Mockup Dummy" 
             className="col-start-1 col-span-3 md:col-span-7 lg:col-span-11 row-start-1 rounded-lg overflow-hidden aspect-video"
           />
@@ -28,7 +28,7 @@ const Gallery = () => {
           {/* Primeira imagem da galeria - Row 3, coluna esquerda */}
           <div className="col-start-1 col-span-3 md:col-span-4 lg:col-span-6 row-start-3 mb-16" onMouseEnter={() => setHoverIndex(0)} onMouseLeave={() => setHoverIndex(null)}>
             <ParallaxImage 
-              src="/galeria2.webp" 
+              src="/teste2.webp"
               alt="Mockup Dummy" 
               className="rounded-lg max-h-[60dvh] overflow-hidden aspect-video"
             />
@@ -38,7 +38,7 @@ const Gallery = () => {
           {/* Segunda imagem da galeria - Row 4, coluna direita */}
           <div className="col-start-1 md:col-start-5 lg:col-start-7 col-span-3 md:col-span-3 lg:col-span-5 row-start-4 mb-16" onMouseEnter={() => setHoverIndex(1)} onMouseLeave={() => setHoverIndex(null)}>
             <ParallaxImage 
-              src="/galeria3.webp" 
+              src="/teste3.webp"
               alt="Mockup Dummy" 
               className="rounded-lg max-h-[60dvh] overflow-hidden aspect-video"
             />
@@ -48,7 +48,7 @@ const Gallery = () => {
           {/* Terceira imagem da galeria - Row 5, coluna esquerda */}
           <div className="col-start-1 col-span-3 md:col-span-4 lg:col-span-6 row-start-5 mb-16" onMouseEnter={() => setHoverIndex(2)} onMouseLeave={() => setHoverIndex(null)}>
             <ParallaxImage 
-              src="/galeria4.webp" 
+              src="/teste4.webp"
               alt="Mockup Dummy" 
               className="rounded-lg max-h-[60dvh] overflow-hidden aspect-video"
             />
@@ -58,7 +58,7 @@ const Gallery = () => {
           {/* Quarta imagem da galeria - Row 6, coluna direita */}
           <div className="col-start-1 md:col-start-5 lg:col-start-7 col-span-3 md:col-span-3 lg:col-span-5 row-start-6" onMouseEnter={() => setHoverIndex(3)} onMouseLeave={() => setHoverIndex(null)}>
             <ParallaxImage 
-              src="/galeria5.webp" 
+              src="/teste5.webp"
               alt="Mockup Dummy" 
               className="rounded-lg max-h-[60dvh] overflow-hidden aspect-video"
             />

@@ -19,7 +19,7 @@ const Hero = () => {
         const titulo = new SplitText(titleRef.current, {type: 'words,lines', autoSplit:true, mask:'lines'})
         const paragrafo = new SplitText(paragraph.current, {type: 'words,lines', autoSplit:true, mask:'lines'})
         tl.from(titulo.words, {
-            delay: 1.5,
+            delay: 1.6,
             duration: 1,
             yPercent: 100,
             stagger: 0.05,
