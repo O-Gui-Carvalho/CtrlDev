@@ -14,18 +14,20 @@ const TextScroll = ({children, className}) => {
             type: 'words, chars'
         });
 
-        gsap.from(split.chars, {
+        gsap.from(split.words, {
             scrollTrigger: {
                 trigger: containerRef.current,
                 start: 'top 90%',
                 end: 'top 50%',
-                scrub: 2,
+                scrub: 5,
+                onStart: () => textAnim.current.style.willChange = 'opacity',
+                onComplete: () => textAnim.current.style.willChange = 'auto',
             },
             opacity: 0.1,
             stagger: 0.05,
             ease: 'power3.inOut'
         })
-    }, { dependencies: [children], scope: containerRef })
+    }, { scope: containerRef })
 
   return (
     <div ref={containerRef} className={className}>

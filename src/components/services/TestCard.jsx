@@ -16,8 +16,9 @@ const TestCard = ({ num, src, alt, title, paragraph, b1, b2, b3, isActive, onAct
 
     // Configura estado inicial
     gsap.set(img, {
-        clipPath: 'inset(0 0 100% 0)',
-        opacity: 0
+      yPercent: 100,
+      opacity: 0,
+      willChange: 'transform, opacity'
     })
 
     gsap.set(content, {
@@ -27,7 +28,7 @@ const TestCard = ({ num, src, alt, title, paragraph, b1, b2, b3, isActive, onAct
     // Animação baseada no estado isActive
     expandAnimation.current = gsap.timeline({ paused: true })
     .to(img, {
-        clipPath: 'inset(0 0 0% 0)',
+        yPercent: 0,
         opacity: 1,
         duration: 0.5,
         ease: 'power2.out'

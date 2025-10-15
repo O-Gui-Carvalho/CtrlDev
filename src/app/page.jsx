@@ -29,7 +29,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-[5000px]">
+    <div>
       <Hero/>
       <About/>
       <Gallery/>

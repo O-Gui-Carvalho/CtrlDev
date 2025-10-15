@@ -35,12 +35,12 @@ const Hero = () => {
     }, {scope: titleRef, paragraph})
 
   return (
-    <div className='relative h-dvh w-dvw overflow-hidden'>
+    <div className='relative h-dvh min-h-[526px] w-dvw overflow-hidden'>
         <video autoPlay muted loop playsInline preload="none" className='absolute top-0 left-0 w-dvw h-full object-cover -z-1'>
             <source src="/heroBg.webm" type="video/webm" />
             Seu navegador não suporta vídeo
         </video>
-        <div className="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-2 md:gap-4 lg:gap-8 px-2 md:px-4 lg:px-8 h-dvh">
+        <div className="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-2 md:gap-4 lg:gap-8 px-2 md:px-4 lg:px-8 h-dvh min-h-[526px]">
             <div className="col-span-4 md:col-span-6 lg:col-span-8 flex flex-col items-start justify-center gap-4 md:gap-8">
                 <h1 className='text-[clamp(2.5rem,5vw,6rem)] text-background font-bold capitalize leading-none' ref={titleRef}>Criamos sites que destacam sua empresa</h1>
                 <p className='text-background text-[clamp(0.8rem,2vw,1rem)] max-w-4xl' ref={paragraph}>Desenvolvemos experiências digitais únicas que conectam sua marca ao público certo. Sites modernos, identidades visuais marcantes e soluções personalizadas para elevar o seu negócio ao próximo nível.</p>

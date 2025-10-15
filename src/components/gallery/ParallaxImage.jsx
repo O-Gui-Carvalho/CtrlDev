@@ -22,7 +22,7 @@ function ParallaxImage({src, alt, className}) {
       },
     })
     tl.from(imagem.current, {
-      yPercent: -30,
+      yPercent: -40,
     }
   )
   }, [])
@@ -30,7 +30,7 @@ function ParallaxImage({src, alt, className}) {
 
   return (
     <div ref={container} className={className}>
-        <Image ref={imagem} src={src} alt={alt} width={4000} height={3000} className="w-full object-cover scale-120"/>
+        <Image ref={imagem} src={src} alt={alt} width={1920} height={1440} className="w-full object-cover scale-120"/>
     </div>
   )
 }

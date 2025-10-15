@@ -1,7 +1,7 @@
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
-import React, { useRef } from 'react'
+import React from 'react'
 import AboutCard from './AboutCard';
 import TextScroll from '../TextScroll';
 
