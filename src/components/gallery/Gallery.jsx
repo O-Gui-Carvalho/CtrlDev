@@ -17,12 +17,13 @@ const Gallery = () => {
           <ParallaxImage 
             src="/ViaJairDestaqMock.webp" 
             alt="Mockup Dummy" 
+            quality={85}
             className="col-start-1 col-span-3 md:col-span-7 lg:col-span-11 row-start-1 rounded-lg overflow-hidden aspect-video"
           />
           
           {/* Texto principal - Row 2 */}
           <TextScroll className="col-start-1 col-span-3 md:col-span-6 lg:col-span-9 row-start-2 text-[clamp(1.5rem,5vw,60px)] leading-snug mb-32 lg:mb-64">
-            Criamos experiencias visuais memoráveis para que seus clientes nunca te esqueçam.
+            Em Destaq: Agencia de viajens ViaJair - Eleve sua experiência aérea.
           </TextScroll>
           
           {/* Primeira imagem da galeria - Row 3, coluna esquerda */}
@@ -30,6 +31,7 @@ const Gallery = () => {
             <ParallaxImage 
               src="/teste2.webp"
               alt="Mockup Dummy" 
+              quality={85}
               className="rounded-lg max-h-[60dvh] overflow-hidden aspect-video"
             />
             <TextHover title={'Restaurante Saporito '} text={' Uma jornada pela culinária Italiana'} active={hoverIndex === 0}/>
@@ -40,6 +42,7 @@ const Gallery = () => {
             <ParallaxImage 
               src="/teste3.webp"
               alt="Mockup Dummy" 
+              quality={85}
               className="rounded-lg max-h-[60dvh] overflow-hidden aspect-video"
             />
             <TextHover title={'Imobiliária Ocarina '} text={' Sua casa nova te aguarda'} active={hoverIndex === 1}/>
@@ -50,6 +53,7 @@ const Gallery = () => {
             <ParallaxImage 
               src="/teste4.webp"
               alt="Mockup Dummy" 
+              quality={85}
               className="rounded-lg max-h-[60dvh] overflow-hidden aspect-video"
             />
             <TextHover title={'Estúdio Mairink '} text={' Transformando suas ideias em arte'} active={hoverIndex === 2}/>
@@ -60,6 +64,7 @@ const Gallery = () => {
             <ParallaxImage 
               src="/teste5.webp"
               alt="Mockup Dummy" 
+              quality={85}
               className="rounded-lg max-h-[60dvh] overflow-hidden aspect-video"
             />
             <TextHover title={'Academia Olympia '} text={' Construa sua melhor versão'} active={hoverIndex === 3}/>

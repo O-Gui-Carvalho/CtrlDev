@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  images: {
+    qualities: [50, 85],
+  },
+};
 
-export default nextConfig;
+export default nextConfig

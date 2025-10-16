@@ -4,7 +4,7 @@ import TextAnimation from '../animations/TextAnimation'
 
 const Hero = () => {
   return (
-    <div className='relative h-dvh w-dvw overflow-hidden'>
+    <div id='hero' className='relative h-dvh w-dvw overflow-hidden'>
         <video autoPlay muted loop playsInline preload="none" className='absolute top-0 left-0 w-dvw h-full object-cover -z-1'>
             <source src="/heroBg.webm" type="video/webm" />
             Seu navegador não suporta vídeo

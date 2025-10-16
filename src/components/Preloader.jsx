@@ -2,7 +2,7 @@
 
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
-import { useState, useEffect, useRef } from 'react'
+import { useState, useRef } from 'react'
 
 const Preloader = () => {
     const animA = useRef([])
@@ -10,14 +10,6 @@ const Preloader = () => {
     const svgRef = useRef(null)
     const overlay = useRef(null)
     const [isLoading, setIsLoading] = useState(true)
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-
-    return () => clearTimeout(timer)
-  }, []);
 
   useGSAP(() => {
     let targetsA = animA.current
@@ -41,7 +33,8 @@ const Preloader = () => {
     tl.to(overlay.current, {
         duration: 1.5,
         clipPath: 'inset(0% 0% 100% 0%)',
-        ease: 'power3.inOut'
+        ease: 'power3.inOut',
+        onComplete: () => setIsLoading(false)
     })
 
   }, {scope: isLoading})

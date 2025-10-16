@@ -1,3 +1,5 @@
+'use client'
+
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger, SplitText } from 'gsap/all';
@@ -20,6 +22,7 @@ const TextScroll = ({children, className}) => {
                 start: 'top 90%',
                 end: 'top 50%',
                 scrub: 5,
+                once: true,
                 onStart: () => textAnim.current.style.willChange = 'opacity',
                 onComplete: () => textAnim.current.style.willChange = 'auto',
             },

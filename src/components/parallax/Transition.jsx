@@ -87,7 +87,7 @@ const Column = ({ images, refProp, className = "" }) => {
               sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
               fill
               loading="lazy"
-              quality={50}
+              quality={85}
               className="object-cover object-top pointer-events-none"
             />
           </div>
