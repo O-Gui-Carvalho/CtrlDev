@@ -69,7 +69,7 @@ const Blog = () => {
     }
 
   return (
-    <div className='custom-grid'>
+    <div id='blog' className='custom-grid'>
         <TextScroll className='col-span-3 md:col-span-6 lg:col-span-9 mb-32 text-[clamp(1.5rem,5vw,60px)] leading-snug'>
             Compartilhamos insights e tendências para impulsionar suas estratégias digitais.
         </TextScroll>

@@ -43,7 +43,7 @@ const Footer = () => {
     }, [])
 
   return (
-    <div ref={container} className='relative h-dvh overflow-hidden'>
+    <div id='footer' ref={container} className='relative h-dvh overflow-hidden'>
         <div className='custom-grid h-full items-center lg:items-start'>
             <div className="col-span-3 md:col-span-7 lg:col-span-8 mt-32">
                 <span ref={title} className='text-[40px] leading-none md:text-6xl lg:text-8xl font-medium'>Tudo pronto para destacar sua empresa?</span>

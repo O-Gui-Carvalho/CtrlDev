@@ -8,11 +8,11 @@ import Image from 'next/image'
 import { SplitText } from 'gsap/all'
 
 const menuLinks = [
-    {path: '/', label: 'Home'},
-    {path: '/', label: 'Projetos'},
-    {path: '/', label: 'Serviços'},
-    {path: '/', label: 'Blog'},
-    {path: '/', label: 'Contato'},
+    {path: '#hero', label: 'Home'},
+    {path: '#gallery', label: 'Projetos'},
+    {path: '#services', label: 'Serviços'},
+    {path: '#blog', label: 'Blog'},
+    {path: '#footer', label: 'Contato'},
 ]
 
 gsap.registerPlugin(SplitText)
@@ -76,7 +76,7 @@ const Header = () => {
             <div className="custom-grid py-4">
                 <div className="justify-between items-start col-span-3 md:col-span-6 lg:col-span-10">
                     <div className="max-w-fit h-full flex items-center">
-                        <Link href='/'>  
+                        <Link href={'#hero'}>  
                             
                             <svg className="h-auto w-24 md:w-36" viewBox="0 0 1362 316" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M218.601 123.093C218.601 196.581 166.798 246.186 90.747 246.186H0V0H90.747C167.166 0 218.601 49.6046 218.601 123.093ZM90.3796 40.4186H44.0876V205.767H90.3796C141.08 205.767 174.514 173.065 174.514 123.093C174.514 73.1209 141.08 40.4186 90.3796 40.4186Z" fill="#308FBF"/>

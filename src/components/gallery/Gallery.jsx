@@ -12,7 +12,7 @@ const Gallery = () => {
     <div className='mt-32 md:mt-64'>
       <HorizontalText/>
       <div className="custom-grid">
-        <div className="col-span-3 md:col-span-7 lg:col-span-11 mt-32 md:mt-64 grid grid-cols-3 md:grid-cols-7 lg:grid-cols-11 gap-x-2 md:gap-x-4 lg:gap-x-8 gap-y-8 md:gap-y-12 lg:gap-y-16" style={{gridTemplateRows: 'auto auto repeat(4, auto)'}}>
+        <div id="gallery" className="col-span-3 md:col-span-7 lg:col-span-11 mt-32 md:mt-64 grid grid-cols-3 md:grid-cols-7 lg:grid-cols-11 gap-x-2 md:gap-x-4 lg:gap-x-8 gap-y-8 md:gap-y-12 lg:gap-y-16" style={{gridTemplateRows: 'auto auto repeat(4, auto)'}}>
           {/* Imagem principal - Row 1 */}
           <ParallaxImage 
             src="/ViaJairDestaqMock.webp" 
@@ -32,7 +32,7 @@ const Gallery = () => {
               src="/teste2.webp"
               alt="Mockup Dummy" 
               quality={85}
-              className="rounded-lg max-h-[60dvh] overflow-hidden aspect-video"
+              className="rounded-lg max-h-[60vh] overflow-hidden aspect-video"
             />
             <TextHover title={'Restaurante Saporito '} text={' Uma jornada pela culinária Italiana'} active={hoverIndex === 0}/>
           </div>
@@ -43,7 +43,7 @@ const Gallery = () => {
               src="/teste3.webp"
               alt="Mockup Dummy" 
               quality={85}
-              className="rounded-lg max-h-[60dvh] overflow-hidden aspect-video"
+              className="rounded-lg max-h-[60vh] overflow-hidden aspect-video"
             />
             <TextHover title={'Imobiliária Ocarina '} text={' Sua casa nova te aguarda'} active={hoverIndex === 1}/>
           </div>
@@ -54,7 +54,7 @@ const Gallery = () => {
               src="/teste4.webp"
               alt="Mockup Dummy" 
               quality={85}
-              className="rounded-lg max-h-[60dvh] overflow-hidden aspect-video"
+              className="rounded-lg max-h-[60vh] overflow-hidden aspect-video"
             />
             <TextHover title={'Estúdio Mairink '} text={' Transformando suas ideias em arte'} active={hoverIndex === 2}/>
           </div>
@@ -65,7 +65,7 @@ const Gallery = () => {
               src="/teste5.webp"
               alt="Mockup Dummy" 
               quality={85}
-              className="rounded-lg max-h-[60dvh] overflow-hidden aspect-video"
+              className="rounded-lg max-h-[60vh] overflow-hidden aspect-video"
             />
             <TextHover title={'Academia Olympia '} text={' Construa sua melhor versão'} active={hoverIndex === 3}/>
           </div>
