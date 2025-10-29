@@ -42,7 +42,7 @@ const Blog = () => {
                 yPercent: 0,
                 duration: 0.5,
                 opacity: 1,
-                ease: 'power2.out'
+                ease: 'power3.inOut'
             })
 
             cover.addEventListener('mouseenter', () => hoverAnimation.play(), { passive: true })
@@ -64,7 +64,7 @@ const Blog = () => {
 
         Flip.from(state, {
             duration: 0.5,
-            ease: 'power2.out',
+            ease: 'power3.inOut',
         })
     }
 

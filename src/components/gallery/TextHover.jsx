@@ -40,13 +40,13 @@ const TextHover = ({ title, text, active }) => {
       gsap.to(splitRef.current.lines, {
         duration: 0.5,
         yPercent: 0,
-        ease: "power2.out",
+        ease: "expo.out",
       })
     } else {
       gsap.to(splitRef.current.lines, {
         yPercent: -100,
         duration: 0.5,
-        ease: "power2.out",
+        ease: "expo.out",
       })
     }
   }, [active, isLargeScreen])

@@ -3,7 +3,6 @@
 import React, { useState } from 'react'
 import TextScroll from '../TextScroll'
 import ServiceCard from './ServiceCard'
-import TestCard from './TestCard'
 
 const Services = () => {
     const [ active, setActive ] = useState(0)
@@ -16,7 +15,7 @@ const Services = () => {
                 </TextScroll>
             </div>
             <div className="w-full">
-                <TestCard 
+                <ServiceCard 
                     num={'01'} 
                     src={'/web-design.webp'} 
                     alt={'Web Design'} 
@@ -28,7 +27,7 @@ const Services = () => {
                     isActive={active === 0}
                     onActivate={() => setActive(0)}
                 />
-                <TestCard 
+                <ServiceCard 
                     num={'02'} 
                     src={'/desenvolvimento-web.webp'} 
                     alt={'Desenvolvimento Web'} 
@@ -40,7 +39,7 @@ const Services = () => {
                     isActive={active === 1}
                     onActivate={() => setActive(1)}
                 />
-                <TestCard 
+                <ServiceCard 
                     num={'03'} 
                     src={'/identidade.webp'} 
                     alt={'Identidade Visual'} 
