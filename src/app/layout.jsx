@@ -14,7 +14,7 @@ const inter = Inter({
 export const metadata = {
   metadataBase: new URL("https://www.ctrldev.com.br"),
   title: {
-    default: "Destaq - Crie seu site conosco!",
+    default: "Studio Destaq - Crie seu site conosco!",
     template: "%s | Destaq",
   },
   description: "A Destaq cria sites profissionais e otimizados para pequenas e médias empresas. Transforme sua presença online e atraia mais clientes.",
