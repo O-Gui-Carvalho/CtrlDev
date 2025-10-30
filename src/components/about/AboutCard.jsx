@@ -1,16 +1,42 @@
 import Image from 'next/image'
-import React from 'react'
+import { memo } from 'react'
 
-const AboutCard = ({imageSrc, imageAlt, title, children, className}) => {
+/**
+ * Card de apresentação de benefícios/características
+ * @param {Object} props
+ * @param {string} props.imageSrc - Caminho da imagem do ícone
+ * @param {string} props.imageAlt - Texto alternativo da imagem
+ * @param {string} props.title - Título do card
+ * @param {React.ReactNode} props.children - Conteúdo do card
+ * @param {string} props.colStart - Classes de posicionamento de coluna
+ * @param {string} [props.className] - Classes CSS adicionais
+ */
+
+const AboutCard = ({
+    imageSrc, 
+    imageAlt, 
+    title, 
+    children, 
+    colStart,
+    className = ''
+  }) => {
   return (
-    <div className={`col-span-full lg:col-span-3 ${className}`}>
-        <div className="flex gap-8 items-center pb-8">
-            <Image src={imageSrc} alt={imageAlt} width={50} height={50}/>
-            <span className='text-3xl'>{title}</span>
-        </div>
+    <article className={`col-span-full lg:col-span-3 ${colStart} ${className}`}>
+        <header className="flex gap-8 items-center pb-8">
+            <div className="relative flex-shrink-0 w-[50px] h-[50px]">
+              <Image
+                src={imageSrc}
+                alt={imageAlt}
+                width={50}
+                height={50}
+                className='object-contain'
+              />
+            </div>
+            <h3 className='text-3xl'>{title}</h3>
+        </header>
         {children}
-    </div>
+    </article>
   )
 }
 
-export default AboutCard
+export default memo(AboutCard)
