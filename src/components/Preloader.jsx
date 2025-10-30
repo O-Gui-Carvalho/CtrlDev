@@ -4,7 +4,7 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { useState, useRef } from 'react'
 
-const ANIMATION_CONFIG = {
+const configs = {
   initialY: 500,
   staggerDelay: 0.05,
   overlapOffset: '-=0.3',
@@ -27,23 +27,23 @@ const Preloader = () => {
       onComplete: () => setIsLoading(false)
     })
 
-    gsap.set([targetsA, targetsB], { yPercent: ANIMATION_CONFIG.initialY })
+    gsap.set([targetsA, targetsB], { yPercent: configs.initialY })
     gsap.set(svgRef.current, { visibility: 'visible' })
 
     tl.to(targetsA, {
       yPercent: 0,
-      stagger: ANIMATION_CONFIG.staggerDelay,
-      ease: ANIMATION_CONFIG.ease
+      stagger: configs.staggerDelay,
+      ease: configs.ease
     })
     .to(targetsB, {
       yPercent: 0,
-      stagger: ANIMATION_CONFIG.staggerDelay,
-      ease: ANIMATION_CONFIG.ease
-    }, ANIMATION_CONFIG.overlapOffset)
+      stagger: configs.staggerDelay,
+      ease: configs.ease
+    }, configs.overlapOffset)
     .to(overlay.current, {
-      duration: ANIMATION_CONFIG.exitDuration,
+      duration: configs.exitDuration,
       clipPath: 'inset(0% 0% 100% 0%)',
-      ease: ANIMATION_CONFIG.ease
+      ease: configs.ease
     })
 
     return () => tl.kill()

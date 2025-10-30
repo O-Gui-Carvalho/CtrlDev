@@ -9,7 +9,7 @@ import TextScroll from '../TextScroll'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const ANIMATION_CONFIG = {
+const configs = {
     duration: 1,
     opacity: 0,
     y: -150,
@@ -63,13 +63,13 @@ const About = () => {
             const animation = gsap.from(card, {
                 scrollTrigger: {
                     trigger: card,
-                    start: ANIMATION_CONFIG.triggerStart,
+                    start: configs.triggerStart,
                     toggleActions: 'play none none none',
                 },
-                duration: ANIMATION_CONFIG.duration,
-                opacity: ANIMATION_CONFIG.opacity,
-                y: ANIMATION_CONFIG.y,
-                ease: ANIMATION_CONFIG.ease,
+                duration: configs.duration,
+                opacity: configs.opacity,
+                y: configs.y,
+                ease: configs.ease,
                 delay: isMobile ? 0 : i * 0.1,
             })
 
