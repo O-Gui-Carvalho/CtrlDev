@@ -31,19 +31,22 @@ const HorizontalText = () => {
 
       if (xPercent.current <= configs.resetThreshold) {
         xPercent.current = 0
-      } else if (xPercent.current > 0) {
+      }
+      if (xPercent.current > 0) {
         xPercent.current = configs.resetThreshold
       }
 
       gsap.set(texts, { xPercent: xPercent.current })
     }
 
-    gsap.ticker.add(step)
-
     const trigger = ScrollTrigger.create({
       trigger: containerRef.current,
       start: 'top bottom',
       end: 'bottom top',
+      onEnter: () => gsap.ticker.add(step),
+      onLeave: () => gsap.ticker.remove(step),
+      onEnterBack: () => gsap.ticker.add(step),
+      onLeaveBack: () => gsap.ticker.remove(step),
       onUpdate: (self) => {
         direction.current = self.direction === 1 ? -1 : 1
       },
@@ -58,18 +61,12 @@ const HorizontalText = () => {
   const textClasses = "uppercase text-darkp text-5xl md:text-7xl lg:text-9xl whitespace-nowrap tracking-wider will-change-transform"
 
   return (
-    <div ref={containerRef} className="relative w-screen overflow-hidden" aria-hidden="true" >
+    <div ref={containerRef} className="relative w-screen overflow-hidden" aria-hidden="true">
       <div className="flex flex-nowrap">
-        <p
-          ref={fText}
-          className={textClasses}
-        >
+        <p ref={fText} className={textClasses}>
           {textContent}&#xa0;-&#xa0;
         </p>
-        <p
-          ref={sText}
-          className={textClasses}
-        >
+        <p ref={sText} className={textClasses}>
           {textContent}&#xa0;-&#xa0;
         </p>
       </div>

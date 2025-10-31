@@ -1,6 +1,5 @@
 'use client'
 import HorizontalText from "./HorizontalText"
-import TextScroll from "../TextScroll"
 import ParallaxImage from "./ParallaxImage"
 import TextHover from "./TextHover"
 import { useState } from "react"
@@ -64,18 +63,3 @@ const Gallery = () => {
 }
 
 export default Gallery
-
-/*
-          Imagem principal - Row 1
-          <ParallaxImage 
-            src="/ViaJairDestaqMock.webp" 
-            alt="Mockup Dummy" 
-            quality={85}
-            className="col-start-1 col-span-3 md:col-span-7 lg:col-span-11 row-start-1 rounded-lg overflow-hidden aspect-video"
-          />
-          
-          Texto principal - Row 2
-          <TextScroll className="col-start-1 col-span-3 md:col-span-6 lg:col-span-9 row-start-2 text-[clamp(1.5rem,5vw,60px)] leading-snug mb-32 lg:mb-64">
-            Em Destaq: Agencia de viajens ViaJair - Eleve sua experiência aérea.
-          </TextScroll>
-*/

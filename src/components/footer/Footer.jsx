@@ -45,6 +45,8 @@ const Footer = () => {
     }, [])
 
     useGSAP(() => {
+        if (!title.current || !container.current || !linkContainer.current) return
+        
         // Split dos textos
         const splitTitle = new SplitText(title.current, { type: 'words,lines', mask: 'lines' })
         const splitLinks = gsap.utils.toArray(links.current).map( el => new SplitText(el, { type: 'lines', mask: 'lines'}) )
