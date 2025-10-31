@@ -52,7 +52,6 @@ const GalleryItem = ({ item, isHovered, onHover }) => {
       <ParallaxImage 
         src={item.src}
         alt={item.alt}
-        quality={85}
         className="rounded-lg max-h-[60vh] overflow-hidden aspect-video"
       />
       <TextHover 
