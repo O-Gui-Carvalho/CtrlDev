@@ -84,7 +84,7 @@ const About = () => {
     }, [])
 
   return (
-    <div className='custom-grid'>
+    <section className='custom-grid'>
         
         <TextScroll className="col-span-3 md:col-span-6 lg:col-span-9 my-32 md:my-64 text-[clamp(1.5rem,5vw,60px)] leading-snug">
             Transformamos ideias em experiências digitais extraordinárias, 
@@ -105,7 +105,7 @@ const About = () => {
             ))}
         </div>
         
-    </div>
+    </section>
   )
 }
 
