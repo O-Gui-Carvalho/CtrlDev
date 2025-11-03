@@ -6,6 +6,7 @@ import { SplitText } from 'gsap/SplitText'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
+import ScrollLink from '../linkHandler/ScrollLink'
 
 gsap.registerPlugin(SplitText)
 
@@ -17,11 +18,11 @@ const configs = {
 }
 
 const menuLinks = [
-    {path: '#hero', label: 'Home'},
-    {path: '#gallery', label: 'Projetos'},
-    {path: '#services', label: 'Serviços'},
-    {path: '#blog', label: 'Blog'},
-    {path: '#footer', label: 'Contato'},
+    {path: 'hero', label: 'Home'},
+    {path: 'gallery', label: 'Projetos'},
+    {path: 'services', label: 'Serviços'},
+    {path: 'blog', label: 'Blog'},
+    {path: 'footer', label: 'Contato'},
 ]
 
 const socialLinks = [
@@ -169,14 +170,13 @@ const Header = () => {
                     <ul className="list-none">
                         {menuLinks.map((link, index) => (
                             <li className="w-max overflow-hidden" key={link.path}>
-                                <div ref={el => menuHolder.current[index] = el}>
-                                    <Link 
-                                        href={link.path} 
-                                        className='text-[clamp(3rem,4vw,5rem)] leading-14 md:leading-14 lg:leading-22 text-background transition-colors duration-300 hover:text-lights' 
-                                        onClick={toggleMenu}
+                                <div ref={el => menuHolder.current[index] = el} onClick={toggleMenu}>
+                                    <ScrollLink
+                                        id={link.path}
+                                        className={'text-[clamp(3rem,4vw,5rem)] leading-14 md:leading-14 lg:leading-22 text-background transition-colors duration-300 hover:text-lights'}
                                     >
                                         {link.label}
-                                    </Link>
+                                    </ScrollLink>
                                 </div>
                             </li>
                         ))}

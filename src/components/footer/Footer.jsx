@@ -8,6 +8,7 @@ import Image from 'next/image'
 import { ScrollTrigger, SplitText } from 'gsap/all'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
+import ScrollLink from '../linkHandler/ScrollLink'
 
 gsap.registerPlugin(SplitText, ScrollTrigger)
 
@@ -22,9 +23,9 @@ const configs = {
 const linksFooter = {
   whatsapp: 'https://wa.me/message/MZ3XAEYWTNVYJ1',
   navigation: [
-    { label: 'Projetos', path: '#gallery' },
-    { label: 'Serviços', path: '#services' },
-    { label: 'Blog', path: '#blog' }
+    { label: 'Projetos', path: 'gallery' },
+    { label: 'Serviços', path: 'services' },
+    { label: 'Blog', path: 'blog' }
   ],
   social: [
     { label: 'Instagram', href: 'https://instagram.com/destaque' },
@@ -117,14 +118,14 @@ const Footer = () => {
             >
                 
                 {/* Voltar ao topo */}
-                <Link 
-                    href='#top' 
+                <ScrollLink 
+                    id='hero' 
                     className="col-span-2 lg:col-span-1 row-start-1 pb-4 md:pb-0 leading-none"
                 >
                     <span ref={el => addToLinks(el, 0)}>
                         Voltar ao topo
                     </span>
-                </Link>
+                </ScrollLink>
 
                 {/* Links de navegação */}
                 <ul className='col-span-2 lg:col-start-3 lg:col-span-6 row-start-2 lg:row-start-1 grid md:hidden lg:grid gap-y-4'>
@@ -133,13 +134,13 @@ const Footer = () => {
                         key={link.path} 
                         className={`col-span-1 ${i === 0 ? 'lg:col-start-1' : i === 1 ? 'lg:col-start-3' : 'lg:col-start-5'}`}
                     >
-                        <Link 
-                        href={link.path}
+                        <ScrollLink
+                        id={link.path}
                         ref={el => addToLinks(el, i + 1)}
                         className="hover:opacity-70 transition-opacity"
                         >
-                        {link.label}
-                        </Link>
+                            {link.label}
+                        </ScrollLink>
                     </li>
                     ))}
                 </ul>
@@ -166,7 +167,7 @@ const Footer = () => {
                     href='/' 
                     className='col-span-2 md:col-span-1 row-start-1 pb-4 md:pb-0 lg:col-start-11'
                 >
-                    <span ref={el => addToLinks(el, 7)}>&#169;CtrlDev</span>
+                    <span ref={el => addToLinks(el, 7)}>&#169;Studio Destaq</span>
                 </Link>
             </nav>
         </div>

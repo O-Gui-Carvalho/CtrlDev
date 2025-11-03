@@ -67,11 +67,10 @@ const Gallery = () => {
   const [hoverIndex, setHoverIndex] = useState(null)
 
   return (
-    <section className='mt-32 md:mt-64'>
+    <section id="gallery" className='mt-32 md:mt-64'>
       <HorizontalText/>
       <div className="custom-grid">
-        <div 
-          id="gallery" 
+        <div
           className="col-span-3 md:col-span-7 lg:col-span-11 mt-32 md:mt-64 grid grid-cols-3 md:grid-cols-7 lg:grid-cols-11 gap-x-2 md:gap-x-4 lg:gap-x-8 gap-y-8 md:gap-y-12 lg:gap-y-16" 
           style={{gridTemplateRows: 'repeat(4, auto)'}}
         >

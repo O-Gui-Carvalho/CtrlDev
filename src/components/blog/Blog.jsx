@@ -1,4 +1,5 @@
 'use client'
+
 import { useRef, useState } from 'react'
 import TextScroll from '../TextScroll'
 import Image from 'next/image'
@@ -69,13 +70,13 @@ const Blog = () => {
     }
 
   return (
-    <div id='blog' className='custom-grid'>
+    <section id='blog' className='custom-grid'>
         <TextScroll className='col-span-3 md:col-span-6 lg:col-span-9 mb-32 text-[clamp(1.5rem,5vw,60px)] leading-snug'>
             Compartilhamos insights e tendências para impulsionar suas estratégias digitais.
         </TextScroll>
         <div className="col-span-3 md:col-span-7 lg:col-span-11 grid grid-cols-3 md:grid-cols-7 lg:grid-cols-11 gap-2 md:gap-4 mb-64">
             {posts.map(( posts, index ) => (
-                <div ref={(el) => containersRef.current[index] = el} key={index} onMouseEnter={() => handleMouseEnter(index)} className={`img-container blog-cover relative overflow-hidden rounded-xl group cursor-pointer md:h-[600px] col-span-3 md:col-span-1 lg:col-span-2 `}>
+                <article ref={(el) => containersRef.current[index] = el} key={index} onMouseEnter={() => handleMouseEnter(index)} className={`img-container blog-cover relative overflow-hidden rounded-xl group cursor-pointer md:h-[600px] col-span-3 md:col-span-1 lg:col-span-2 `}>
                     <Image 
                         src={posts.img} 
                         alt='Coding blog post' 
@@ -96,10 +97,10 @@ const Blog = () => {
                             <FaArrowUp className='rotate-45 text-lg lg:text-2xl transition-transform duration-300 ease-in-out group-hover:rotate-90'/>
                         </div>
                     </div>
-                </div>
+                </article>
             ))}
         </div>
-    </div>
+    </section>
   )
 }
 

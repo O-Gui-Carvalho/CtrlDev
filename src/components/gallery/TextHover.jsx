@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react"
+'use client'
+
+import { useState, useEffect, useRef } from "react"
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
-import { SplitText } from "gsap/all"
-import React, { useRef } from "react"
+import { SplitText } from "gsap/SplitText"
 
 gsap.registerPlugin(SplitText)
 
