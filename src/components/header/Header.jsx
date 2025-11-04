@@ -157,11 +157,11 @@ const Header = () => {
             <div className="grid grid-rows-3 grid-cols-4 md:grid-cols-8 lg:grid-cols-12 md:gap-4 lg:gap-8 px-2 h-dvh content-end">
                 <div className="hidden md:block md:col-span-4 lg:col-span-5 row-span-2 -ml-8 relative h-dvh">
                     <Image 
-                        src='/DestaqMock.webp' 
+                        src='/iPhoneMockup.webp' 
                         alt='Nav Image' 
                         fill 
                         className='object-cover'
-                        sizes="(max-width: 768px) 0vw, (max-width: 1024px) 50vw, 41vw"
+                        sizes="(max-width: 768px) 0vw, 100vw"
                         aria-hidden="true"
                     />
                 </div>
