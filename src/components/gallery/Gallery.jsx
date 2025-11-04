@@ -7,34 +7,34 @@ import { useCallback, useState } from "react"
 const galleryData = [
   {
     id: 0,
-    src: '/teste2.png',
-    alt: 'Mockup do projeto Restaurante Saporito',
-    title: 'Restaurante Saporito',
-    text: 'Uma jornada pela culinária Italiana',
+    src: '/teste2.webp',
+    alt: 'Mockup do projeto Nexa Studio',
+    title: 'Nexa Studio',
+    text: 'Arquitetura e Design',
     gridClass: 'col-start-1 col-span-3 md:col-span-4 lg:col-span-6 row-start-1'
   },
   {
     id: 1,
     src: '/teste3.webp',
-    alt: 'Mockup do projeto Imobiliária Ocarina',
-    title: 'Imobiliária Ocarina',
-    text: 'Sua casa nova te aguarda',
+    alt: 'Mockup do projeto Fit&Go',
+    title: 'Fit&Go',
+    text: 'Moda fitness feminina',
     gridClass: 'col-start-1 md:col-start-5 lg:col-start-7 col-span-3 md:col-span-3 lg:col-span-5 row-start-2'
   },
   {
     id: 2,
     src: '/teste4.webp',
-    alt: 'Mockup do projeto Estúdio Mairink',
-    title: 'Estúdio Mairink',
-    text: 'Transformando suas ideias em arte',
+    alt: 'Mockup do projeto Solaris',
+    title: 'Solaris',
+    text: 'Soluções em energia solar',
     gridClass: 'col-start-1 col-span-3 md:col-span-4 lg:col-span-6 row-start-3'
   },
   {
     id: 3,
     src: '/teste5.webp',
-    alt: 'Mockup do projeto Academia Olympia',
-    title: 'Academia Olympia',
-    text: 'Construa sua melhor versão',
+    alt: 'Mockup do projeto Debit',
+    title: 'Debit',
+    text: 'Soluções digitais e automação',
     gridClass: 'col-start-1 md:col-start-5 lg:col-start-7 col-span-3 md:col-span-3 lg:col-span-5 row-start-4'
   }
 ]

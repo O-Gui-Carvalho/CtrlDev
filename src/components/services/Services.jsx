@@ -8,7 +8,7 @@ const Services = () => {
     const [ active, setActive ] = useState(0)
 
   return (
-        <div id='services' className="mb-64">
+        <div id='services' className="mb-32 md:mb-64">
             <div className="custom-grid">
                 <TextScroll className="col-start-1 col-span-3 md:col-span-6 lg:col-span-9 row-start-2 text-[clamp(1.5rem,5vw,60px)] leading-snug my-32 lg:my-64">
                     Construímos sites modernos e otimizados para que sua marca brilhe na web.

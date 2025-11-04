@@ -46,7 +46,7 @@ const Hero = () => {
                 <p className='text-background text-[clamp(0.8rem,2vw,1rem)] max-w-4xl' ref={paragraph}>Desenvolvemos experiências digitais únicas que conectam sua marca ao público certo. Sites modernos, identidades visuais marcantes e soluções personalizadas para elevar o seu negócio ao próximo nível.</p>
                 <div className="flex w-dvw gap-2 lg:gap-4">
                     <Button where="https://wa.me/message/MZ3XAEYWTNVYJ1" type='main'>Fale Conosco <PiPaperPlaneTiltBold/></Button>
-                    <Button where="#gallery" type='sec'>Conheça nosso trabalho</Button>
+                    <Button target='_self' where="#gallery" type='sec'>Conheça nosso trabalho</Button>
                 </div>
             </div>
             <div className="fixed right-2 md:right-4 lg:right-8 bottom-6 mix-blend-difference">
