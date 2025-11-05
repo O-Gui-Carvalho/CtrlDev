@@ -102,7 +102,7 @@ const Header = () => {
             <div className="custom-grid py-4">
                 <div className="flex justify-between items-start col-span-3 md:col-span-6 lg:col-span-10">
                     <Link 
-                        href='#hero'
+                        href='/'
                         className="block w-24 md:w-36"
                         aria-label="Destaque Studio - Voltar ao início"
                     >     
