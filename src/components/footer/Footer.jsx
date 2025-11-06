@@ -28,9 +28,9 @@ const linksFooter = {
     { label: 'Blog', path: 'blog' }
   ],
   social: [
-    { label: 'Instagram', href: 'https://instagram.com/destaque' },
-    { label: 'Behance', href: 'https://behance.com/destaque' },
-    { label: 'Github', href: 'https://github.com/destaque' }
+    { label: 'Instagram', href: 'https://instagram.com/segundostech' },
+    { label: 'Behance', href: 'https://www.behance.net/studiodestaq' },
+    { label: 'Github', href: 'https://github.com/O-Gui-Carvalho' }
   ]
 }
 
