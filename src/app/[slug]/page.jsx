@@ -13,6 +13,10 @@ const Article = async ({ params }) => {
                 {articleData.h1 || articleData.title}
             </h1>
 
+            <p className="w-fit mx-auto flex justify-center py-1 px-4 border-[#005d8c20] rounded-lg border-1">
+                {articleData.category}
+            </p>
+
             {articleData.image && (
                 <div className="mt-16 w-full">
                     <Image 

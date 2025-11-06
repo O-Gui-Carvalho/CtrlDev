@@ -7,6 +7,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
 import ScrollLink from '../linkHandler/ScrollLink'
+import { usePathname } from 'next/navigation'
 
 gsap.registerPlugin(SplitText)
 
@@ -32,6 +33,9 @@ const socialLinks = [
 ]
 
 const Header = () => {
+    const pathName = usePathname()
+    const isHome = pathName === '/'
+
     const container = useRef(null)
     const overlay = useRef(null)
     const menuHolder = useRef([])
@@ -173,6 +177,7 @@ const Header = () => {
                                 <div ref={el => menuHolder.current[index] = el} onClick={toggleMenu}>
                                     <ScrollLink
                                         id={link.path}
+                                        href={isHome ? undefined : `/#${link.path}`}
                                         className={'text-[clamp(3rem,4vw,5rem)] leading-14 md:leading-14 lg:leading-22 text-background transition-colors duration-300 hover:text-lights'}
                                     >
                                         {link.label}

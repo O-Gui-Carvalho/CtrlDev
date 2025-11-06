@@ -1,23 +1,44 @@
 'use client'
 
-const ScrollLink = ({id, children, className}) => {
+import Link from "next/link"
+import { useRouter } from "next/navigation"
+import { forwardRef } from "react"
 
-    const handleScroll = (e) => {
-        e.preventDefault()
+const ScrollLink = forwardRef(({id, children, href, className}, ref) => {
+  const router = useRouter()
 
-        const section = document.getElementById(id)
+  const handleScroll = (e) => {
+      e.preventDefault()
+      const section = document.getElementById(id)
+      if (section) {
+          section.scrollIntoView({ behavior: 'smooth' })
+          window.history.replaceState(null, '', '/')
+      }
+  }
 
-        if (section) {
-            section.scrollIntoView({ behavior: 'smooth' })
-            window.history.replaceState(null, '', '/')
-        }
-    }
+  const handleExternalClick = (e) => {
+    e.preventDefault()
+    
+    router.push(`/#${id}`)
+    
+    setTimeout(() => {
+      window.history.replaceState(null, '', '/')
+    }, 200)
+  }
+
+  if (href) {
+    return (
+      <Link href={href} className={className} onClick={handleExternalClick} ref={ref}>
+        {children}
+      </Link>
+    )
+  }
 
   return (
-    <a href={`#${id}`} onClick={handleScroll} className={className}>
+    <Link href={`#${id}`} onClick={handleScroll} className={className} ref={ref}>
         {children}
-    </a>
+    </Link>
   )
-}
+})
 
 export default ScrollLink
